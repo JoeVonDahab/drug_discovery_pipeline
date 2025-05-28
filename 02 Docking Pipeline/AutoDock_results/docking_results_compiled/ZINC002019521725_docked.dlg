@@ -1,0 +1,956 @@
+AutoDock-GPU version: v1.6-7-ga46ab564d2ac5f1a1523f65239b43505a1c29364
+
+**********************************************************
+**    AutoDock-GPU AUTODOCKTOOLS-COMPATIBLE DLG FILE    **
+**********************************************************
+
+
+    DOCKING PARAMETERS
+    ________________________
+
+
+Ligand file:                               /home/joe/projects/AutoDOCK/Hif2Alpha/ligands_pdbqt/ZINC002019521725.pdbqt
+Grid fld file:                             /home/joe/projects/AutoDOCK/Hif2Alpha/receptor.maps.fld
+
+Random seed:                               1748335530, 28865
+Number of runs:                            10
+Number of energy evaluations:              2280181
+Number of generations:                     42000
+Size of population:                        150
+Rate of crossover:                         80.000000%
+Tournament selection probability limit:    60.000000%
+Rate of mutation:                          2.000000%
+Maximal allowed delta movement:            +/- 6.000000A
+Maximal allowed delta angle:               +/- 90.000000
+
+Rate of local search:                      100.000000%
+Maximal number of local search iterations: 300
+Rho lower bound:                           0.010000
+Spread of local search delta movement:     2.000000A
+Spread of local search delta angle:        74.999999
+Limit of consecutive successes/failures:   4
+
+Handle symmetry during clustering:         YES
+RMSD tolerance:                            2.000000A
+
+Program call in command line was:          /home/joe/projects/AutoDOCK/AutoDock-GPU/bin/autodock_gpu_128wi --ffile /home/joe/projects/AutoDOCK/Hif2Alpha/receptor.maps.fld --lfile /home/joe/projects/AutoDOCK/Hif2Alpha/ligands_pdbqt/ZINC002019521725.pdbqt --nrun 10 -resnam /home/joe/projects/AutoDOCK/Hif2Alpha/docking_results_compiled/ZINC002019521725_docked 
+
+
+    GRID PARAMETERS
+    ________________________
+
+
+Receptor name:                             receptor
+Number of grid points (x, y, z):           55, 55, 55
+Grid center (x, y, z):                     24.008000, -1.524000, -10.857000A
+Grid size (x, y, z):                       20.250000, 20.250000, 20.250000A
+Grid spacing:                              0.375000A
+
+
+    LIGAND PARAMETERS
+    ________________________
+
+
+Ligand name:                               /home/joe/projects/AutoDOCK/Hif2Alpha/ligands_pdbqt/ZINC002019521725
+Number of atoms:                           18
+Number of rotatable bonds:                 7
+Number of atom types:                      6
+
+
+    DUMMY DATA (only for ADT-compatibility)
+    ________________________
+
+
+DPF> outlev 1
+DPF> ga_run 10
+DPF> fld /home/joe/projects/AutoDOCK/Hif2Alpha/receptor.maps.fld
+DPF> move /home/joe/projects/AutoDOCK/Hif2Alpha/ligands_pdbqt/ZINC002019521725.pdbqt
+
+
+    COUNTER STATES
+    ________________________
+
+
+Number of energy evaluations performed:    2281024
+Number of generations used:                315
+
+
+    INPUT LIGAND PDBQT FILE:
+    ________________________
+
+
+INPUT-LIGAND-PDBQT: REMARK  Name = 
+INPUT-LIGAND-PDBQT: REMARK  9 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: C_1  and  O_2
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: O_2  and  C_3
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C_3  and  C_4
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C_3  and  C_5
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C_5  and  O_6
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: C_5  and  C_7
+INPUT-LIGAND-PDBQT: REMARK    7  A    between atoms: C_7  and  O_8
+INPUT-LIGAND-PDBQT: REMARK    8  A    between atoms: O_8  and  C_9
+INPUT-LIGAND-PDBQT: REMARK    9  A    between atoms: C_14  and  C_15
+INPUT-LIGAND-PDBQT: REMARK                            x       y       z     vdW  Elec       q    Type
+INPUT-LIGAND-PDBQT: REMARK                         _______ _______ _______ _____ _____    ______ ____
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: ATOM      1  O   UNL     1       0.761   1.425   0.777  0.00  0.00    -0.489 OA
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   1   2
+INPUT-LIGAND-PDBQT: ATOM      2  C   UNL     1       1.878   0.734   0.279  0.00  0.00    +0.125 A 
+INPUT-LIGAND-PDBQT: ATOM      3  C   UNL     1       1.807  -0.134  -0.829  0.00  0.00    +0.084 A 
+INPUT-LIGAND-PDBQT: ATOM      4  C   UNL     1       2.953  -0.796  -1.280  0.00  0.00    +0.128 A 
+INPUT-LIGAND-PDBQT: ATOM      5  F   UNL     1       2.877  -1.631  -2.346  0.00  0.00    -0.205 F 
+INPUT-LIGAND-PDBQT: ATOM      6  C   UNL     1       4.177  -0.599  -0.636  0.00  0.00    +0.057 A 
+INPUT-LIGAND-PDBQT: ATOM      7  C   UNL     1       4.259   0.264   0.463  0.00  0.00    +0.058 A 
+INPUT-LIGAND-PDBQT: ATOM      8  C   UNL     1       3.111   0.928   0.915  0.00  0.00    +0.064 A 
+INPUT-LIGAND-PDBQT: BRANCH   7   9
+INPUT-LIGAND-PDBQT: ATOM      9  C   UNL     1       5.520   0.470   1.126  0.00  0.00    +0.099 C 
+INPUT-LIGAND-PDBQT: ATOM     10  N   UNL     1       6.534   0.635   1.659  0.00  0.00    -0.191 NA
+INPUT-LIGAND-PDBQT: ENDBRANCH   7   9
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   2
+INPUT-LIGAND-PDBQT: BRANCH   1  11
+INPUT-LIGAND-PDBQT: ATOM     11  C   UNL     1      -0.585   1.258   0.331  0.00  0.00    +0.263 C 
+INPUT-LIGAND-PDBQT: BRANCH  11  12
+INPUT-LIGAND-PDBQT: ATOM     12  C   UNL     1      -1.182  -0.057   0.866  0.00  0.00    +0.180 C 
+INPUT-LIGAND-PDBQT: BRANCH  12  13
+INPUT-LIGAND-PDBQT: ATOM     13  C   UNL     1      -2.626  -0.250   0.356  0.00  0.00    +0.147 C 
+INPUT-LIGAND-PDBQT: ATOM     14  C   UNL     1      -3.225  -1.552   0.903  0.00  0.00    +0.040 C 
+INPUT-LIGAND-PDBQT: BRANCH  13  16
+INPUT-LIGAND-PDBQT: ATOM     15  C   UNL     1      -3.674   0.424  -1.612  0.00  0.00    +0.194 C 
+INPUT-LIGAND-PDBQT: ATOM     16  O   UNL     1      -2.609  -0.320  -1.062  0.00  0.00    -0.377 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH  13  16
+INPUT-LIGAND-PDBQT: ENDBRANCH  12  13
+INPUT-LIGAND-PDBQT: BRANCH  12  17
+INPUT-LIGAND-PDBQT: ATOM     17  O   UNL     1      -1.180  -0.029   2.271  0.00  0.00    -0.386 OA
+INPUT-LIGAND-PDBQT: ATOM     18  H   UNL     1      -0.266  -0.284   2.565  0.00  0.00    +0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  12  17
+INPUT-LIGAND-PDBQT: ENDBRANCH  11  12
+INPUT-LIGAND-PDBQT: ENDBRANCH   1  11
+INPUT-LIGAND-PDBQT: TORSDOF 7
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   1 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -4.83e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -4.83e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +6.35e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.12e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -4.83e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.51 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.51 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      23.674   2.227 -10.107+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      24.776   1.524 -10.623 +6.71 +4.85    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      26.078   1.655 -10.100 -0.36 -0.02    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      27.136   0.930 -10.655 -0.52 -0.16    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      28.387   1.062 -10.148 -0.46 +0.20    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      26.909   0.069 -11.731 -0.46 -0.07    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      25.619  -0.071 -12.256 -0.48 -0.06    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      24.558   0.655 -11.699 -0.50 -0.07    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      25.382  -0.960 -13.363 +1.06 +0.87    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      25.193  -1.675 -14.254+67.41-93.84    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      22.314   2.039 -10.495+65.69+78.75    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      21.632   0.976  -9.613 +2.20 +2.39    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      20.274   1.489  -9.089 +7.63 +5.61    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      19.439   2.079 -10.233 -0.75 -0.02    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      20.873   1.944  -6.885+99.99+99.99    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      20.505   2.505  -8.126+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      22.469   0.669  -8.527 +1.27 -6.58    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      23.090  -0.044  -8.832 -0.20 +0.23    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   2 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -4.61e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -4.61e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +6.46e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.11e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -4.61e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  +0.27 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  +0.27 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      25.165   2.195  -5.616+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      25.682   2.439  -6.899+99.99+99.99    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      24.861   2.655  -8.024+51.74+23.01    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      25.433   2.893  -9.278+30.18+20.17    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      24.638   3.098 -10.357+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      26.822   2.920  -9.422 -0.67 -0.08    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      27.646   2.710  -8.310 -0.29 +0.09    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      27.074   2.473  -7.054 +0.21 +0.30    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      29.078   2.740  -8.457+59.34+30.05    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      30.229   2.765  -8.576+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      25.703   1.276  -4.665+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      24.781   1.153  -3.438+27.60+22.23    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      23.323   0.892  -3.872+99.99+99.99    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      23.214   0.834  -5.401+99.99+99.99    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      22.654   3.097  -4.210+73.12+61.10    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      22.504   1.952  -3.400+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      24.843   2.341  -2.691+14.93-37.70    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      24.937   2.080  -1.737 -0.24 +0.03    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   3 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -6.56e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -6.56e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +7.18e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.37e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -6.56e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.30 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.30 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      25.904  -4.404  -8.530+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      26.461  -3.120  -8.647+58.88+34.02    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      25.782  -1.954  -8.243 +2.65 +1.30    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      26.387  -0.701  -8.384 -0.54 -0.17    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      25.727   0.418  -7.994 +0.49 -2.15    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      27.671  -0.598  -8.926 -0.49 -0.08    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      28.355  -1.751  -9.327 -0.54 -0.05    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      27.750  -3.007  -9.185 +0.55 +0.37    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      29.679  -1.647  -9.883+33.32+16.02    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      30.743  -1.564 -10.330+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      26.123  -5.489  -9.432+96.49+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      24.935  -5.648 -10.399+99.99+99.99    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      23.617  -5.843  -9.620+30.44+22.93    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      22.765  -6.945 -10.263+76.35+16.54    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      23.687  -3.566 -10.106+17.76+16.25    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      22.881  -4.629  -9.645+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      25.158  -6.759 -11.230+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      26.023  -7.160 -10.951+99.99+99.99    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   4 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -4.66e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -4.66e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +4.51e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -9.17e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -4.66e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.50 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.50 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      20.967  -1.715  -8.259+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      20.009  -1.508  -9.265 +2.76 +2.16    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      18.719  -1.006  -8.998 -0.54 -0.03    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      17.806  -0.820 -10.041 +4.62 +3.09    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      16.566  -0.339  -9.777+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      18.168  -1.129 -11.355 -0.22 +0.06    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      19.448  -1.624 -11.630 -0.42 -0.01    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      20.364  -1.810 -10.586 -0.63 -0.10    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      19.824  -1.940 -12.983+15.83 +7.94    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      20.126  -2.194 -14.072+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      22.274  -1.141  -8.226+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      23.284  -2.110  -7.584+99.99+99.99    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      23.120  -2.135  -6.049+99.99+99.99    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      21.727  -2.647  -5.661+68.48+14.81    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      24.250  -0.777  -4.530+99.99+99.99    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      23.273  -0.815  -5.548+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      24.589  -1.703  -7.910 +2.62 -9.24    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      24.577  -0.712  -7.971 -0.11 +0.15    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   5 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -4.74e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -4.74e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +4.87e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -9.61e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -4.74e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  +2.70 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  +2.70 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      27.523  -0.558  -9.866 -0.78 +0.59    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      26.167  -0.283  -9.619 -0.46 -0.14    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      25.527   0.881 -10.088 -0.28 +0.00    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      24.174   1.102  -9.811+38.40+25.51    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      23.565   2.225 -10.264+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      23.448   0.168  -9.067 +0.10 +0.19    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      24.074  -0.994  -8.600 -0.50 -0.03    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      25.429  -1.215  -8.878 -0.40 -0.03    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      23.327  -1.958  -7.836+51.13+30.82    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      22.727  -2.734  -7.222+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      28.124  -1.852  -9.844 -0.73 -0.23    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      29.254  -1.951 -10.886+53.93+42.10    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      29.731  -3.411 -11.040+23.77+16.51    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      29.072  -4.071 -12.258 +9.34 +2.26    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      29.576  -3.366  -8.716+14.12+13.03    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      29.368  -4.140  -9.877+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      30.331  -1.145 -10.478+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      30.251  -1.029  -9.495+11.50+40.50    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   6 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -5.23e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -5.23e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +6.46e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.17e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -5.23e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.35 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.35 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      20.311  -4.926 -13.805+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      19.732  -6.185 -13.577+75.27+44.66    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      20.373  -7.198 -12.836+99.99+46.13    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      19.747  -8.433 -12.643+99.99+99.99    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      20.371  -9.404 -11.930+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      18.480  -8.670 -13.181+63.09+19.50    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      17.833  -7.669 -13.915+36.56+11.73    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      18.459  -6.431 -14.109+12.20 +4.51    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      16.526  -7.911 -14.468+15.02 +9.75    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      15.475  -8.106 -14.913+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      19.595  -3.710 -14.027+95.27+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      20.538  -2.602 -14.532+81.36+66.79    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      20.835  -1.583 -13.411+33.25+23.07    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      19.587  -0.751 -13.089+99.99+84.16    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      22.800  -0.485 -12.814+20.12+17.35    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      21.864  -0.706 -13.846+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      19.937  -1.943 -15.618+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      20.370  -2.289 -16.443+99.99+99.99    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   7 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -5.52e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -5.52e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +4.19e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -9.71e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -5.52e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.14 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.14 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      21.033  -0.766  -7.500+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      20.247  -0.704  -8.663+23.16+15.18    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      18.843  -0.588  -8.629 -0.19 +0.15    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      18.112  -0.532  -9.820 +0.84 +0.82    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      16.761  -0.422  -9.780+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      18.770  -0.588 -11.051 -0.51 -0.05    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      20.164  -0.699 -11.095 -0.58 -0.08    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      20.897  -0.755  -9.902 -0.36 +0.01    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      20.844  -0.754 -12.363 +0.07 +0.32    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      21.390  -0.799 -13.382+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      22.227  -0.018  -7.265+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      23.374  -0.517  -8.163 +0.88 +1.43    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      23.518   0.377  -9.414 +1.33 +1.43    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      24.875   0.147 -10.091 -0.43 -0.02    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      24.274   1.993  -7.917+99.99+99.99    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      23.433   1.738  -9.020+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      23.111  -1.839  -8.559 +7.89-32.12    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      23.182  -1.865  -9.549 -0.16 +0.14    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   8 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -5.30e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -5.30e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +4.44e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -9.74e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -5.30e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  +0.96 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  +0.96 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      20.282  -7.867  -4.841+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      19.933  -6.616  -5.376+99.99+99.99    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      18.697  -6.374  -6.009 +8.50 +4.20    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      18.405  -5.107  -6.523+99.99+68.86    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      17.215  -4.882  -7.133+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      19.336  -4.071  -6.410+99.99+77.41    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      20.565  -4.300  -5.779 +3.61 +1.41    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      20.858  -5.570  -5.263+63.22+22.91    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      21.524  -3.233  -5.659+10.59 +6.17    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      22.294  -2.375  -5.563+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      21.362  -8.688  -5.286+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      22.716  -8.105  -4.838+17.86+16.48    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      22.855  -8.163  -3.302 +1.71 +1.84    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      21.671  -7.463  -2.623 +6.30 +1.60    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      25.181  -8.177  -3.432 -0.75 -0.23    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      24.052  -7.501  -2.922 +1.58 -6.79    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      22.810  -6.770  -5.268+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      23.217  -6.785  -6.174+15.99+63.21    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   9 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -5.94e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -5.94e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +8.13e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.41e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -5.94e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.43 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.43 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      19.858  -5.981 -11.369+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      19.448  -4.689 -11.737+35.00+21.97    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      19.999  -3.523 -11.171 +1.54 +0.96    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      19.550  -2.262 -11.577 -0.71 -0.17    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      20.085  -1.144 -11.027 -0.47 +0.30    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      18.552  -2.152 -12.549 +6.98 +2.21    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      18.001  -3.305 -13.120 +0.88 +0.46    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      18.451  -4.568 -12.714+21.13 +7.03    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      16.974  -3.192 -14.123 +5.32 +3.04    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      16.150  -3.102 -14.930+99.99-99.99    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      19.452  -7.194 -12.003+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      20.569  -8.252 -11.933+99.99+99.99    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      21.890  -7.691 -12.501+99.99+99.99    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      22.469  -8.637 -13.561+99.99+54.76    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      22.995  -6.214 -11.079+91.24+78.00    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      22.830  -7.566 -11.444+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      20.183  -9.383 -12.672+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      19.573  -9.067 -13.389+99.99+99.99    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    FINAL DOCKED STATE:
+    ________________________
+
+
+Run:   10 / 10
+Time taken for this run:   0.066s
+
+DOCKED: MODEL        10
+DOCKED: USER    Run = 10
+DOCKED: USER
+DOCKED: USER    Estimated Free Energy of Binding    =  -5.29e+04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER
+DOCKED: USER    (1) Final Intermolecular Energy     =  -5.29e+04 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  +5.19e+04 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -1.05e+05 kcal/mol
+DOCKED: USER        Moving Ligand-Fixed Receptor    =  -5.29e+04 kcal/mol
+DOCKED: USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =  -0.58 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =  +2.09 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy         =  -0.58 kcal/mol
+DOCKED: USER
+DOCKED: USER
+DOCKED: REMARK  Name = 
+DOCKED: REMARK  9 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C_1  and  O_2
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_3
+DOCKED: REMARK    3  A    between atoms: C_3  and  C_4
+DOCKED: REMARK    4  A    between atoms: C_3  and  C_5
+DOCKED: REMARK    5  A    between atoms: C_5  and  O_6
+DOCKED: REMARK    6  A    between atoms: C_5  and  C_7
+DOCKED: REMARK    7  A    between atoms: C_7  and  O_8
+DOCKED: REMARK    8  A    between atoms: O_8  and  C_9
+DOCKED: REMARK    9  A    between atoms: C_14  and  C_15
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNL     1      16.890  -1.964 -15.288+99.99-99.99    -0.489 OA 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNL     1      17.123  -2.191 -13.921+36.03+21.30    +0.125 A  
+DOCKED: ATOM      3  C   UNL     1      17.154  -3.482 -13.356 +1.29 +0.85    +0.084 A  
+DOCKED: ATOM      4  C   UNL     1      17.390  -3.647 -11.988 +7.48 +4.90    +0.128 A  
+DOCKED: ATOM      5  F   UNL     1      17.416  -4.892 -11.451+99.99-99.99    -0.205 F  
+DOCKED: ATOM      6  C   UNL     1      17.599  -2.532 -11.172 -0.58 -0.03    +0.057 A  
+DOCKED: ATOM      7  C   UNL     1      17.574  -1.246 -11.724 +0.77 +0.39    +0.058 A  
+DOCKED: ATOM      8  C   UNL     1      17.338  -1.080 -13.095+97.17+31.07    +0.064 A  
+DOCKED: BRANCH   7   9
+DOCKED: ATOM      9  C   UNL     1      17.792  -0.097 -10.885 +5.19 +2.80    +0.099 C  
+DOCKED: ATOM     10  N   UNL     1      17.966   0.827 -10.211 +0.23 -1.51    -0.191 NA 
+DOCKED: ENDBRANCH   7   9
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  11
+DOCKED: ATOM     11  C   UNL     1      17.334  -0.826 -16.027+99.99+99.99    +0.263 C  
+DOCKED: BRANCH  11  12
+DOCKED: ATOM     12  C   UNL     1      17.037  -0.996 -17.529+75.09+59.35    +0.180 C  
+DOCKED: BRANCH  12  13
+DOCKED: ATOM     13  C   UNL     1      17.066   0.367 -18.251+99.99+90.45    +0.147 C  
+DOCKED: ATOM     14  C   UNL     1      17.496   1.482 -17.289+99.99+26.47    +0.040 C  
+DOCKED: BRANCH  13  16
+DOCKED: ATOM     15  C   UNL     1      15.366   1.958 -18.338+99.99+99.99    +0.194 C  
+DOCKED: ATOM     16  O   UNL     1      15.762   0.662 -18.731+99.99-99.99    -0.377 OA 
+DOCKED: ENDBRANCH  13  16
+DOCKED: ENDBRANCH  12  13
+DOCKED: BRANCH  12  17
+DOCKED: ATOM     17  O   UNL     1      15.771  -1.585 -17.687+99.99-99.99    -0.386 OA 
+DOCKED: ATOM     18  H   UNL     1      15.921  -2.547 -17.883+21.07+73.60    +0.210 HD 
+DOCKED: ENDBRANCH  12  17
+DOCKED: ENDBRANCH  11  12
+DOCKED: ENDBRANCH   1  11
+DOCKED: TORSDOF 7
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+    CLUSTERING HISTOGRAM
+    ____________________
+
+
+________________________________________________________________________________
+     |           |     |           |     |
+Clus | Lowest    | Run | Mean      | Num | Histogram
+-ter | Binding   |     | Binding   | in  |
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 | -65564.65 |   3 | -65564.65 |   1 |#
+   2 | -59404.12 |   9 | -59404.12 |   1 |#
+   3 | -55223.05 |   7 | -50906.12 |   2 |##
+   4 | -53027.97 |   8 | -53027.97 |   1 |#
+   5 | -52907.32 |  10 | -52907.32 |   1 |#
+   6 | -52333.24 |   6 | -52333.24 |   1 |#
+   7 | -48250.85 |   1 | -48250.85 |   1 |#
+   8 | -47435.02 |   5 | -47435.02 |   1 |#
+   9 | -46106.99 |   2 | -46106.99 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+
+    RMSD TABLE
+    __________
+
+
+_______________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      3   -65564.65      0.00     24.99           RANKING
+   2      1      9   -59404.12      0.00     21.72           RANKING
+   3      1      7   -55223.05      0.00     20.50           RANKING
+   3      2      4   -46589.19      1.89     20.11           RANKING
+   4      1      8   -53027.97      0.00     19.72           RANKING
+   5      1     10   -52907.32      0.00     20.52           RANKING
+   6      1      6   -52333.24      0.00     22.28           RANKING
+   7      1      1   -48250.85      0.00     23.01           RANKING
+   8      1      5   -47435.02      0.00     25.50           RANKING
+   9      1      2   -46106.99      0.00     22.93           RANKING
+
+Run time 0.733 sec
+Idle time 0.417 sec
