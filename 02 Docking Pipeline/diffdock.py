@@ -84,8 +84,8 @@ import os
 import requests
 
 # ---- CONFIG ----
-input_dir = "sdf_output"
-output_dir = "results_output"
+input_dir = "sdf_output_actives"
+output_dir = "results_output_actives"
 receptor_path = "receptor_clean.pdb"
 
 url = "https://health.api.nvidia.com/v1/biology/mit/diffdock"
