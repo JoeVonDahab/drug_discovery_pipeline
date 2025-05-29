@@ -13,9 +13,12 @@ Combined, these 2 along with a pubmed search is fed to the agentic TxGemma for e
 ### 2) ```Agentic_TxGemma_PK_Prop.ipynb```
 Evaluates the PK properties of the drug. Due to TxGemma's generation, we were unable to reverse the normalization of the clearance for hepatocytes and microsomes. However, we are able to extract these 3 PK properties for each SMILE string provided:
 
-- Oral Bioavailability (F) ; Reported AUROC: 0.655
-- Half Life (t<sub>1/2</sub>) ; Reported Spearman Correlation: 0.494
-- Steady State Volume of Distribution (VD<sub>ss</sub>) ; Reported Spearman Correlation: 0.607
+- Oral Bioavailability (F)
+    - Reported AUROC: 0.655
+- Half Life (t<sub>1/2</sub>)
+    - Reported Spearman Correlation: 0.494
+- Steady State Volume of Distribution (VD<sub>ss</sub>)
+    - Reported Spearman Correlation: 0.607
 
 To run these 2 files, please create a conda environment using:
 ```
