@@ -1,4 +1,4 @@
-**Results of Docking Can Be Found on this LINK:**
+![image](https://github.com/user-attachments/assets/57ec50f8-e53e-4613-8bc0-8aac96e39834)**Results of Docking Can Be Found on this LINK:**
 **https://drive.google.com/drive/folders/1-Przbd8SiuCFw2KAwpXHUNoe6rlcoDq-?usp=drive_link**
 
 # **Targeted Molecular Docking Workflow for HIF-2α**
@@ -19,13 +19,16 @@ The following software and environment configuration was used:
         conda create -n meeko_py310 python=3.10
         conda activate meeko_py310
         ```
-* **Meeko & RDKit:** Installed into the Conda environment from the `conda-forge` channel. This step was crucial to resolve an initial `ModuleNotFoundError: No module named 'rdkit.six'`.
+* **Meeko & RDKit:** Installed into the Conda environment from the `conda-forge` channel. 
     ```bash
     conda install -c conda-forge meeko rdkit
+    pip install -U meeko -> upgrade meeko 
     ```
-    *Initial attempts to upgrade Meeko using `pip install -U meeko` in a different environment did not resolve the `rdkit.six` issue, necessitating the creation of a new, clean Conda environment with specific package versions.*
 * **AutoDock-GPU:** The GPU-accelerated docking engine. (Assumed to be pre-installed and accessible).
-* **AutoGrid4:** Part of the AutoDock4 suite, used for generating grid maps. (Assumed to be pre-installed and accessible).
+* **AutoGrid4:** Part of the AutoDock4 suite just run:
+* ```bash
+  sudo apt install autogrid
+  ```
 * **UCSF Chimera / ChimeraX:** Used for molecular visualization, receptor cleaning, and selection of target residues.
 
 ---
