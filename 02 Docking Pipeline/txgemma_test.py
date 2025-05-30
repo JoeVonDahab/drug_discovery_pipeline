@@ -3,7 +3,7 @@ from huggingface_hub import hf_hub_download, login
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import pipeline
 
-login("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")
+login("")
 
 
 # Load prompt template for tasks from TDC
