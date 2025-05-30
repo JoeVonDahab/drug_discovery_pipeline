@@ -74,7 +74,7 @@ Meeko's `mk_prepare_receptor.py` script was used to prepare the full receptor PD
 **Command Executed:**
 ```bash
 mk_prepare_receptor.py --read_pdb receptor_ready_5tbm.pdb -o myreceptor_targeted -p -g --box_enveloping custom_residues_5tbm_cleaned.pdb --padding 5.0
-
+```
 #### **Explanation:**
 
 * `--read_pdb receptor_ready_5tbm.pdb`: Specifies the input full receptor PDB.
