@@ -116,11 +116,12 @@ bash run_docking_batch.sh
 bash convert_dlgs_to_pdbqt.sh
 ```
 * it requires MGLToolsPckgs, to install run either:
-* ```bash
+```bash
   conda install bioconda::mgltools
    conda install bioconda/label/cf201901::mgltools
 ```
-**Thank You**
-**By: Youssef Abo-Dahab, Pharm.D, M.S Candidate**
-
-
+**Youssef Abo-Dahab, Pharm.D**  
+*M.S. Candidate, AI & Computational Drug Discovery*  
+*Bioengineering and Therapeutic Sciences Department*  
+University of California, San Francisco (UCSF)  
+ 📧 youssef.abo-dahab@ucsf.edu
