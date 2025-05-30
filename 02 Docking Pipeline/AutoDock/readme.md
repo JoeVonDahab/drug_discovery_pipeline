@@ -86,7 +86,7 @@ mk_prepare_receptor.py --read_pdb receptor_ready_5tbm.pdb -o myreceptor_targeted
 
 #### **Output Files from this step:**
 
-* `myreceptor_targeted.pdbqt` (or `myreceptor_targeted_rigid.pdbqt`): The full receptor prepared in PDBQT format.
+* `myreceptor_targeted.pdbqt`: The full receptor prepared in PDBQT format.
 * `myreceptor_targeted.gpf`: The AutoGrid Parameter File, with grid dimensions centered on the selected residues.
 * `myreceptor_targeted.box.pdb`: A PDB file representing the grid box for visualization.
 * `boron-silicon-atom_par.dat`: Atomic parameters for B and Si.
