@@ -1,10 +1,10 @@
 import json
 import os
 
-base_path = r"C:\Users\zhaol\Downloads\drug_discovery_pipeline\Docking Pipeline\results_output_actives"
+base_path = r"C:\Users\zhaol\Downloads\drug_discovery_pipeline\Docking Pipeline\results_output_inactives"
 highest_confidences = []
 
-for i in range(37):
+for i in range(19):
     ligand_folder = os.path.join(base_path, f"ligand_{i}")
     input_file = os.path.join(ligand_folder, "response_text.txt")
     output_folder = os.path.join(ligand_folder, "diffdock_actual_outcome")
@@ -53,4 +53,4 @@ if highest_confidences:
 else:
     print("No confidence scores found.")
 
-#Average highest confidence across ligands: 0.5232616483762458
+#Average highest confidence across ligands: 0.4198611488467769

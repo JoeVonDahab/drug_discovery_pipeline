@@ -40,7 +40,6 @@
 #     for i, conf in enumerate(confidences, start=1):
 #         out_file.write(f"{i} \t {conf}\n")
 
-#Average highest confidence across ligands: 0.29975198871559566
 
 import json
 import os
@@ -48,7 +47,7 @@ import os
 base_path = r"C:\Users\zhaol\Downloads\drug_discovery_pipeline\Docking Pipeline\results_output"
 ligand_confidences = []
 
-for i in range(10000):
+for i in range(1000):
     ligand_folder = os.path.join(base_path, f"ligand_{i}")
     input_file = os.path.join(ligand_folder, "response_text.txt")
     output_folder = os.path.join(ligand_folder, "diffdock_actual_outcome")
@@ -90,30 +89,21 @@ for i in range(10000):
 # Sort ligands by highest confidence descending
 ligand_confidences.sort(key=lambda x: x[1], reverse=True)
 
-# Select as many ligands as possible with average ≥ 0.299
-selected_ligands = []
-running_total = 0.0
+# Select top 100 ligands
+top_100_ligands = ligand_confidences[:100]
 
-for idx, (ligand_id, conf_score) in enumerate(ligand_confidences, start=1):
-    running_total += conf_score
-    avg = running_total / idx
-    if avg >= 0.299:
-        selected_ligands.append((ligand_id, conf_score))
-    else:
-        break
+# Compute average confidence score
+average_confidence = sum(score for _, score in top_100_ligands) / len(top_100_ligands)
 
-# Output selected ligands
-output_path = os.path.join(base_path, "selected_ligands_by_confidence.txt")
+# Output top ligands
+output_path = os.path.join(base_path, "top_100_ligands_by_confidence.txt")
 with open(output_path, "w") as out:
-    out.write("Selected ligands with highest confidence (avg >= 0.299):\n\n")
+    out.write("Top 100 ligands by highest confidence score:\n\n")
     out.write("Ligand ID\tConfidence Score\n")
-    for ligand_id, score in selected_ligands:
+    for ligand_id, score in top_100_ligands:
         out.write(f"{ligand_id}\t{score:.4f}\n")
+    out.write(f"\nAverage confidence score: {average_confidence:.4f}\n")
 
 # Print summary
-if selected_ligands:
-    avg_final = sum(score for _, score in selected_ligands) / len(selected_ligands)
-    print(f"Selected {len(selected_ligands)} ligands with avg confidence ≥ 0.299.")
-    print(f"Final average confidence: {avg_final:.4f}")
-else:
-    print("No ligands selected. All had average confidence below 0.299.")
+print(f"Selected top {len(top_100_ligands)} ligands by confidence.")
+print(f"Average confidence score of top 100 ligands: {average_confidence:.4f}")

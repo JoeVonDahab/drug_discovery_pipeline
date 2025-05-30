@@ -23,11 +23,11 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 
 # Create output directory
-output_dir = "sdf_output_actives"
+output_dir = "sdf_output_inactives"
 os.makedirs(output_dir, exist_ok=True)
 
 # Read SMILES from file
-with open("../actives.txt", "r") as file:
+with open("../inactives.txt", "r") as file:
     smiles_list = [line.strip() for line in file if line.strip()]
 
 # Generate SDF files
