@@ -26,7 +26,7 @@ The following software and environment configuration was used:
     ```
 * **AutoDock-GPU:** The GPU-accelerated docking engine. (Assumed to be pre-installed and accessible).
 * **AutoGrid4:** Part of the AutoDock4 suite just run:
-* ```bash
+  ```bash
   sudo apt install autogrid
   ```
 * **UCSF Chimera / ChimeraX:** Used for molecular visualization, receptor cleaning, and selection of target residues.
@@ -37,13 +37,14 @@ The following software and environment configuration was used:
 
 ### **2.1: Receptor Preparation (General)**
 
-1.  **Obtain Receptor Structure:** A PDB structure of the target receptor is required. For this workflow, the receptor structure corresponding to PDB ID `5TBM` (HIF-2α PAS-B domain) was used as a base.
-2.  **Clean Receptor:** The PDB file was cleaned to remove non-essential molecules (e.g., crystallographic waters, non-relevant co-solvents, or ligands). Hydrogens were added (this is also handled by Meeko later if not done explicitly).
+1.  **Obtain Receptor Structure:** A PDB structure of the target receptor is required. For this workflow `5TBM` (HIF-2α PAS-B domain) was used as a base.
+2.  **Clean Receptor:** Using chimera we removed the chain b, ligand and the solvent using: select then delete commands.
+3.  **receptor preparation** In Chimera run Tools -> Structure Editing -> Dock Prep (add hydrogen atoms)
     * **Input file example:** `receptor_ready_5tbm.pdb` (This is the cleaned receptor PDB file).
 
 ### **2.2: Identifying and Selecting Target Residues (UCSF Chimera/ChimeraX)**
 
-To focus the docking on a specific binding site within HIF-2α, key residues known or hypothesized to interact with inhibitors were selected. Based on structural information (e.g., from literature, PDB ID 5TBM, and the provided summary table), the following residues in the HIF-2α PAS-B domain were identified as important:
+To focus the docking on a specific binding site within HIF-2α, key residues known or hypothesized to interact with inhibitors were selected gathered from the literature:
 
 * **H293:** Direct Bond (H-bond), Allosteric Modulator
 * **Y281:** Direct Bond (H-bond network, n → π\*Ar); Allosteric Modulator
@@ -65,15 +66,6 @@ Using UCSF Chimera or ChimeraX:
 2.  The residues listed above (or a relevant subset defining the entire target cavity) were selected.
 3.  Only the atoms of these selected residues were saved to a new PDB file.
     * **Output custom PDB file example:** `custom_residues_5tbm_cleaned.pdb`
-
-### **2.3: Ligand Preparation (General)**
-
-Ligands intended for docking need to be prepared in the PDBQT format. This involves generating 3D coordinates, adding hydrogens, assigning partial charges (e.g., Gasteiger), and defining rotatable bonds.
-* This can be done using Meeko's `mk_prepare_ligand.py` script or AutoDockTools (ADT).
-    ```bash
-    # Example command (not run during our troubleshooting, but part of a full workflow)
-    # mk_prepare_ligand.py -i ligand.sdf -o prepared_ligand.pdbqt
-    ```
 
 ### **2.4: Generating a Focused Grid Parameter File (GPF) with Meeko**
 
