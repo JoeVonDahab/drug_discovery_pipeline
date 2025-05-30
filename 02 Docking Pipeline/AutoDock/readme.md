@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/57ec50f8-e53e-4613-8bc0-8aac96e39834)**Results of Docking Can Be Found on this LINK:**
+**Results of Docking Can Be Found on this LINK:**
 **https://drive.google.com/drive/folders/1-Przbd8SiuCFw2KAwpXHUNoe6rlcoDq-?usp=drive_link**
 
 # **Targeted Molecular Docking Workflow for HIF-2α**
@@ -118,7 +118,7 @@ bash convert_dlgs_to_pdbqt.sh
 * it requires MGLToolsPckgs, to install run either:
 * ```bash
   conda install bioconda::mgltools
-conda install bioconda/label/cf201901::mgltools
+   conda install bioconda/label/cf201901::mgltools
 ```
 **Thank You**
 **By: Youssef Abo-Dahab, Pharm.D, M.S Candidate**
