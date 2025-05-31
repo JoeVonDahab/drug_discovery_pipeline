@@ -7,6 +7,9 @@ This document outlines the step-by-step procedure followed to perform targeted m
 
 ---
 
+![image](https://github.com/user-attachments/assets/483554bd-d2ad-4e6b-b08f-1862796b9758)
+
+
 ## **1. Software and Environment Setup**
 
 The following software and environment configuration was used:
