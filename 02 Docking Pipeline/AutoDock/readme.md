@@ -22,7 +22,7 @@ The following software and environment configuration was used:
 * **Meeko & RDKit:** Installed into the Conda environment from the `conda-forge` channel. 
     ```bash
     conda install -c conda-forge meeko rdkit
-    pip install -U meeko -> upgrade meeko 
+    sudo apt install -U meeko 
     ```
 * **AutoDock-GPU:** The GPU-accelerated docking engine. (Assumed to be pre-installed and accessible).
 * **AutoGrid4:** Part of the AutoDock4 suite just run:
