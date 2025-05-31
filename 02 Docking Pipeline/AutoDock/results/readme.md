@@ -38,6 +38,4 @@ A docking box was used to define the binding site. Only ligands whose docked pos
 
 ### Example Row from CSV
 
-Rank	Compound	SMILES	Affinity_kcal_per_mol	DLG_file	Within_Pocket
-1	ZINC000609375753_docked	CS(=O)(=O)c1cc(C(=O)NCc2ccccc2Oc2cccc(F)c2)cc([N+](=O)[O-])c1	-11.35	ZINC000609375753_docked.dlg	TRUE
 ![image](https://github.com/user-attachments/assets/31396a9b-d5d4-482a-b352-d6c8a9a5b501)
