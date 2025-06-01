@@ -156,6 +156,23 @@ CSV_OUT         = Path("docking_results_ranked_simple.csv")
 SMILES_INPUT_FILE = Path("50k.smi") # Added SMILES input file
 TOP_N           = 100
 ```
+**Isolate undocked compounds**
+to isolate undocked compounds run:
+open separate_undocked and edit
+```python
+csv_file_path = 'results/docking_results_ranked_docked.csv' # Path to the CSV file containing docking results
+smiles_file_path = '1m.smi' # Path to the SMILES file containing all compounds
+new_smiles_file_path = 'undocked_smiles.smi'    # Path to save the undocked SMILES
+```
+then run
+```bash
+python seprate_undocked.py
+```
+To separate batches for docking, run:
+```
+python give_me_n_compounds.py undocked_smiles.smi 100000 --parts 2 --output_prefix undocked_100K
+```
+You can change 100000 to number fo compounds you want and 2 to number of batches (parts you want) and undocked_100K to the prefix of the compound 
 
 **Youssef Abo-Dahab, Pharm.D**  
 *M.S. Candidate, AI & Computational Drug Discovery*  
