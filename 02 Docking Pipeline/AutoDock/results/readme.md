@@ -26,6 +26,8 @@ A docking box was used to define the binding site. Only ligands whose docked pos
   | `DLG_file`           | Name of the `.dlg` file that was processed                         |
   | `Within_Pocket`      | `True` if the corresponding PDBQT file was found and valid         |
 
+**PT2385 superimposed:**
+![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/dc97889a-657a-44f0-ae64-caef58b76898)
 - **`top_100_ligands_simple/`**:  
   Contains the **top 100 PDBQT files** for ligands with the strongest predicted affinity **and** valid poses inside the pocket (as indicated by presence of filtered `_best_pose.pdbqt`).
 * top compound imposed with crystal structure ligand:
