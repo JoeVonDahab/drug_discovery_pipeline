@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# this script maps each unique atom in a SMILES file to the first compound ID it appears in.
 import re
 
 # Regex to grab:

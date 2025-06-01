@@ -1,3 +1,4 @@
+# this script processes docking results to extract SMILES strings and their corresponding compound names
 import os
 
 def get_docked_compounds(directory):

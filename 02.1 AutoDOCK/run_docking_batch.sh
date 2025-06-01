@@ -5,7 +5,7 @@
 AUTODOCK_GPU_EXEC="/home/joe/projects/AutoDOCK/AutoDock-GPU/bin/autodock_gpu_128wi"
 
 # 2. Name of your PRE-CALCULATED receptor grid map file (.maps.fld)
-MAP_FILE_FLD_FILENAME="receptor.maps.fld"
+MAP_FILE_FLD_FILENAME="myreceptor_targeted.maps.fld"
 
 # 3. Name of the directory containing your ligand PDBQT files
 LIGAND_DIR="ligands_pdbqt"

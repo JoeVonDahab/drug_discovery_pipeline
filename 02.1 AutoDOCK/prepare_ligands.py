@@ -1,3 +1,5 @@
+# This script converts SMILES strings from an input file into individual PDBQT files.
+
 import os
 import subprocess
 from rdkit import Chem
@@ -61,6 +63,7 @@ def prepare_ligands_from_smiles(smiles_file_path, output_pdbqt_dir):
         embed_status = AllChem.EmbedMolecule(mol_h, params)
 
         if embed_status == -1: 
+            continue
             print(f"  WARNING: Initial 3D embedding failed for {safe_name}. Trying with random coordinates.")
             params_random = AllChem.EmbedParameters()
             params_random.useRandomCoords = True
@@ -129,11 +132,11 @@ if __name__ == "__main__":
 
     # 1. Set the path to YOUR input SMILES file
     #    Examples: "actives.smi"
-    input_smiles_file = "50k.smi"  # <--- CHANGE THIS to process a different SMILES file
+    input_smiles_file = "undocked_100K_part1.smi"  # <--- CHANGE THIS to process a different SMILES file
 
     # 2. Set the name for the directory where PDBQT files will be saved
     #    This directory will be created if it doesn't exist.
-    pdbqt_output_directory = "ligands_pdbqt" # 
+    pdbqt_output_directory = "ligands_pdbqt_part1" # <--- you can change this to any directory name you prefer, but its better to keep it as it is 
     # ======================================================================
 
     print(f"Starting ligand preparation...")
