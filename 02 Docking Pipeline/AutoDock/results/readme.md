@@ -14,8 +14,9 @@ A docking box was used to define the binding site. Only ligands whose docked pos
 
 ### Output Files
 
-- **`docking_results_ranked_simple.csv`**:  
-  A ranked list of compounds sorted by binding energy (lowest/best first), with the following columns:
+1.  **`docking_results_ranked_docked.csv` (Main Docking Results):**
+    * This is the primary CSV file containing the comprehensive list of **all** compounds that were successfully docked.
+    * Compounds are ranked based on their predicted binding affinity (e.g., AutoDock-GPU score in kcal/mol), with the most favorable scores listed first.
 
   | Column                | Description                                                       |
   |------------------------|-------------------------------------------------------------------|
@@ -25,13 +26,25 @@ A docking box was used to define the binding site. Only ligands whose docked pos
   | `Affinity_kcal_per_mol` | Predicted binding energy from `.dlg` file                       |
   | `DLG_file`           | Name of the `.dlg` file that was processed                         |
   | `Within_Pocket`      | `True` if the corresponding PDBQT file was found and valid         |
-- **`top_100_ligands_simple/`**:
-  
+
+2.  **`docking_results_ranked_actives.csv`:**
+    * contains the docking results of known active compounds.
+    
+3.  **`docking_results_ranked_inactives.csv`:**
+     * contains the docking results of known inactive compounds but have a close structure.
+
+4.  **`closest_100_to_actives.csv`:**
+    **closest to the mean binding energy observed for the known active compounds** (from `docking_results_ranked_actives.csv`).
+5.  **`top_100_ligands_simple.rar` (Archive File):**
+    **PDBQT files for the top 100 ligands** that had the strongest predicted binding affinity *and* whose poses were found within the defined binding pocket.
+    
+6.  **`comparing_results.ipynb` (Jupyter Notebook):**
+    it contains code for result analysis and visualization 
+---
 ### **PT2385 superimposed:**
 ![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/dc97889a-657a-44f0-ae64-caef58b76898)
  
-  Contains the **top 100 PDBQT files** for ligands with the strongest predicted affinity **and** valid poses inside the pocket (as indicated by presence of filtered `_best_pose.pdbqt`).
-### top compound imposed with crystal structure ligand:
+ ### top compound imposed with crystal structure ligand:
 ![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/eeaa7de0-2362-4128-9c91-4ab91ab5cabe)
 
 #### Data for top 100 compound 
