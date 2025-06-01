@@ -124,7 +124,11 @@ and then in the terminal run:
 ```bash
 prepare_ligands.py
 ```
-### **2.8: Finally the output file was converted to pdbqt using:**
+### **2.8: Run docking**
+```bash
+./run_docking_batch.sh
+```
+### **2.9: Finally the output file was converted to pdbqt using:**
 ```bash
 bash convert_dlgs_to_pdbqt.sh
 ```
