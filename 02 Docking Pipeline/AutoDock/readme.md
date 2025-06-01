@@ -1,6 +1,3 @@
-**Results of Docking Can Be Found on this LINK:**
-**https://drive.google.com/drive/folders/1-Przbd8SiuCFw2KAwpXHUNoe6rlcoDq-?usp=drive_link**
-
 # **Targeted Molecular Docking Workflow for HIF-2α**
 
 This document outlines the step-by-step procedure followed to perform targeted molecular docking of ligands against specific residues of the Hypoxia-Inducible Factor 2-alpha (HIF-2α) PAS-B domain. The workflow utilizes UCSF Chimera/ChimeraX for receptor preparation and residue selection, Meeko for preparing receptor PDBQT files and targeted Grid Parameter Files (GPFs), AutoGrid4 for grid map generation, and AutoDock-GPU for the docking calculations.
