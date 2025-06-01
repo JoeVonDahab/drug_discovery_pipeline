@@ -25,15 +25,16 @@ A docking box was used to define the binding site. Only ligands whose docked pos
   | `Affinity_kcal_per_mol` | Predicted binding energy from `.dlg` file                       |
   | `DLG_file`           | Name of the `.dlg` file that was processed                         |
   | `Within_Pocket`      | `True` if the corresponding PDBQT file was found and valid         |
-
-**PT2385 superimposed:**
+- **`top_100_ligands_simple/`**:
+  
+### **PT2385 superimposed:**
 ![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/dc97889a-657a-44f0-ae64-caef58b76898)
-- **`top_100_ligands_simple/`**:  
+ 
   Contains the **top 100 PDBQT files** for ligands with the strongest predicted affinity **and** valid poses inside the pocket (as indicated by presence of filtered `_best_pose.pdbqt`).
-* top compound imposed with crystal structure ligand:
+### top compound imposed with crystal structure ligand:
 ![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/eeaa7de0-2362-4128-9c91-4ab91ab5cabe)
 
-* Data for top 100 compound 
+#### Data for top 100 compound 
   ![top_100_scores](https://github.com/user-attachments/assets/54cc5395-3fe7-4431-b315-4d65db9cd85b)
 
 ### Notes
