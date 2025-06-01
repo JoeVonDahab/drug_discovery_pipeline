@@ -5,13 +5,16 @@ This analysis ranks all docked compounds by their **predicted binding energy** (
 - Their **SMILES structure**, matched by compound name from the file `50k.smi`
 - Whether their docked pose lies **within the expected pocket**, based on whether the corresponding filtered PDBQT file exists (typically generated when the pose intersects the defined docking box)
 
+## Mean Docked Score Comparison
+![all_compared](https://github.com/user-attachments/assets/bb1270f9-6f44-4475-b6f3-4a63d606e935)
+---
 ### Pocket Definition
 
 A docking box was used to define the binding site. Only ligands whose docked pose fell within this region were considered for export. The pocket is visualized below:
 
 ![Docking Box View 1](https://github.com/user-attachments/assets/2fab8f0e-688c-4ded-8686-9e39ff91287b)
 ![Docking Box View 2](https://github.com/user-attachments/assets/f5b6a878-1d45-43ed-bef5-6462ad749a68)
-
+---
 ### Output Files
 
 1.  **`docking_results_ranked_docked.csv` (Main Docking Results):**
@@ -26,6 +29,10 @@ A docking box was used to define the binding site. Only ligands whose docked pos
   | `Affinity_kcal_per_mol` | Predicted binding energy from `.dlg` file                       |
   | `DLG_file`           | Name of the `.dlg` file that was processed                         |
   | `Within_Pocket`      | `True` if the corresponding PDBQT file was found and valid         |
+  
+**Example Row from CSV**
+
+![image](https://github.com/user-attachments/assets/31396a9b-d5d4-482a-b352-d6c8a9a5b501)
 
 2.  **`docking_results_ranked_actives.csv`:**
     * contains the docking results of known active compounds.
@@ -49,7 +56,7 @@ A docking box was used to define the binding site. Only ligands whose docked pos
 
 #### Data for top 100 compound 
   ![top_100_scores](https://github.com/user-attachments/assets/54cc5395-3fe7-4431-b315-4d65db9cd85b)
-
+---
 ### Notes
 
 - Ligands **outside the pocket** were excluded from the top export list, even if their binding score was high.
@@ -57,9 +64,7 @@ A docking box was used to define the binding site. Only ligands whose docked pos
 
 ---
 
-### Example Row from CSV
 
-![image](https://github.com/user-attachments/assets/31396a9b-d5d4-482a-b352-d6c8a9a5b501)
 
 
 
