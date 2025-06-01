@@ -1,4 +1,4 @@
-**Docking Results**
+## **Docking Results**
 
 This analysis ranks all docked compounds by their **predicted binding energy** (in kcal/mol), as computed from AutoDock-GPU `.dlg` output files. The compounds are also annotated with:
 
