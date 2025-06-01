@@ -114,7 +114,17 @@ The `myreceptor_targeted.gpf` file was manually edited:
 autogrid4 -p myreceptor_targeted.gpf -l myreceptor_targeted.glg
 bash run_docking_batch.sh
 ```
-### **2.7: Finally the output file was converted to pdbqt using:**
+### **2.7: Convert smiles to PDBQT files**
+first open the file **prepare_ligands.py**
+change the line:
+```python
+input_smiles_file = "your_smiles_file.smi"  # <--- CHANGE THIS to process a different SMILES file
+```
+and then in the terminal run:
+```bash
+prepare_ligands.py
+```
+### **2.8: Finally the output file was converted to pdbqt using:**
 ```bash
 bash convert_dlgs_to_pdbqt.sh
 ```
