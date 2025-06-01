@@ -159,8 +159,8 @@ TOP_N           = 100
 ---
 
 ## 3: **Isolate undocked compounds**
-to isolate undocked compounds run:
-open separate_undocked and edit
+To isolate undocked compounds, open separate_undocked.py and edit:
+
 ```python
 csv_file_path = 'results/docking_results_ranked_docked.csv' # Path to the CSV file containing docking results
 smiles_file_path = '1m.smi' # Path to the SMILES file containing all compounds
