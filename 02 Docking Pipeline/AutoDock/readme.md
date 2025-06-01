@@ -125,8 +125,34 @@ and then in the terminal run:
 prepare_ligands.py
 ```
 ### **2.8: Run docking**
+first make sure you have the right setup:
+```shell
+ === Configuration ===
+# 1. FULL PATH to your compiled AutoDock-GPU executable
+AUTODOCK_GPU_EXEC="/home/joe/projects/AutoDOCK/AutoDock-GPU/bin/autodock_gpu_128wi"
+
+# 2. Name of your PRE-CALCULATED receptor grid map file (.maps.fld)
+MAP_FILE_FLD_FILENAME="myreceptor_targeted.maps.fld"
+
+# 3. Name of the directory containing your ligand PDBQT files
+LIGAND_DIR="ligands_pdbqt"
+
+# 4. Name of the directory where docking results (DLG files) will be saved
+OUTPUT_DIR="docking_results_compiled"
+
+# 5. Docking run parameters
+NUM_RUNS="10"              # Number of docking runs per ligand
+DEVICE_NUMBER="2"          # SET THIS to the GPU device number (e.g., 1 for the first GPU, 2 for the second) only if you use run_docking_with_gpu.sh
+```
+then run 
 ```bash
-./run_docking_batch.sh
+bash run_docking_batch.sh
+```
+Or to select your gpu 
+```bash
+bash run_docking_with_gpu.sh
+```
+
 ```
 ### **2.9: the output file was converted to pdbqt using:**
 ```bash
