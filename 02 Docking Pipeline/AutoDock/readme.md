@@ -144,16 +144,16 @@ OUTPUT_DIR="docking_results_compiled"
 NUM_RUNS="10"              # Number of docking runs per ligand
 DEVICE_NUMBER="2"          # SET THIS to the GPU device number (e.g., 1 for the first GPU, 2 for the second) only if you use run_docking_with_gpu.sh
 ```
-then run 
+then run:
+
 ```bash
 bash run_docking_batch.sh
 ```
-Or to select your gpu 
+Or with gpu selection:
 ```bash
 bash run_docking_with_gpu.sh
 ```
 
-```
 ### **2.9: the output file was converted to pdbqt using:**
 ```bash
 bash convert_dlgs_to_pdbqt.sh
