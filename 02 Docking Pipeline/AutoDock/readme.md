@@ -128,7 +128,7 @@ prepare_ligands.py
 ```bash
 ./run_docking_batch.sh
 ```
-### **2.9: Finally the output file was converted to pdbqt using:**
+### **2.9: the output file was converted to pdbqt using:**
 ```bash
 bash convert_dlgs_to_pdbqt.sh
 ```
@@ -137,6 +137,26 @@ bash convert_dlgs_to_pdbqt.sh
   conda install bioconda::mgltools
    conda install bioconda/label/cf201901::mgltools
 ```
+### **2.10: filter the ligands that have docked outside the pocket:**
+with **what** environment active run:
+```bash
+python filter_docked_ligands.py
+```
+### **2.11: rank the files by their energy and copy the top 100 compound into a separate folder:**
+with **what** environment active run:
+```bash
+python rank_docking_results.py
+```
+the following settings applied:
+```python
+INPUT_DLG_DIR   = Path("docking_results_compiled")
+INPUT_PDBQT_DIR = Path("docking_converted_filtered")
+TOP_OUT_DIR     = Path("top_100_ligands_simple")
+CSV_OUT         = Path("docking_results_ranked_simple.csv")
+SMILES_INPUT_FILE = Path("50k.smi") # Added SMILES input file
+TOP_N           = 100
+```
+
 **Youssef Abo-Dahab, Pharm.D**  
 *M.S. Candidate, AI & Computational Drug Discovery*  
 *Bioengineering and Therapeutic Sciences Department*  
