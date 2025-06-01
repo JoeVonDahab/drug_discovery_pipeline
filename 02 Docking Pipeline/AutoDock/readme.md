@@ -156,7 +156,7 @@ CSV_OUT         = Path("docking_results_ranked_simple.csv")
 SMILES_INPUT_FILE = Path("50k.smi") # Added SMILES input file
 TOP_N           = 100
 ```
-**Isolate undocked compounds**
+### 3: **Isolate undocked compounds**
 to isolate undocked compounds run:
 open separate_undocked and edit
 ```python
