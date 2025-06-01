@@ -5,6 +5,13 @@ This analysis ranks all docked compounds by their **predicted binding energy** (
 - Their **SMILES structure**, matched by compound name from the file `50k.smi`
 - Whether their docked pose lies **within the expected pocket**, based on whether the corresponding filtered PDBQT file exists (typically generated when the pose intersects the defined docking box)
 
+### Pocket Definition
+
+A docking box was used to define the binding site. Only ligands whose docked pose fell within this region were considered for export. The pocket is visualized below:
+
+![Docking Box View 1](https://github.com/user-attachments/assets/2fab8f0e-688c-4ded-8686-9e39ff91287b)
+![Docking Box View 2](https://github.com/user-attachments/assets/f5b6a878-1d45-43ed-bef5-6462ad749a68)
+
 ### Output Files
 
 - **`docking_results_ranked_simple.csv`**:  
@@ -26,14 +33,6 @@ This analysis ranks all docked compounds by their **predicted binding energy** (
 
 * Data for top 100 compound 
   ![top_100_scores](https://github.com/user-attachments/assets/54cc5395-3fe7-4431-b315-4d65db9cd85b)
-
-
-### Pocket Definition
-
-A docking box was used to define the binding site. Only ligands whose docked pose fell within this region were considered for export. The pocket is visualized below:
-
-![Docking Box View 1](https://github.com/user-attachments/assets/2fab8f0e-688c-4ded-8686-9e39ff91287b)
-![Docking Box View 2](https://github.com/user-attachments/assets/f5b6a878-1d45-43ed-bef5-6462ad749a68)
 
 ### Notes
 
