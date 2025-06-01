@@ -153,7 +153,8 @@ bash run_docking_with_gpu.sh
 
 ### **2.9: the output file was converted to pdbqt using:**
 ```bash
-bash convert_dlgs_to_pdbqt.sh
+chmod +x convert_dlgs_to_pdbqt.sh
+./convert_dlgs_to_pdbqt.sh
 ```
 * it requires MGLToolsPckgs, to install run either:
 ```bash
