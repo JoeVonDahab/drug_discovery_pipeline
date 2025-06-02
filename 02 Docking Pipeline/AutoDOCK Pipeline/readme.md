@@ -108,20 +108,19 @@ The `myreceptor_targeted.gpf` file was manually edited:
 ### **2.6: Then autogrid and docking commands:**
 ```bash
 autogrid4 -p myreceptor_targeted.gpf -l myreceptor_targeted.glg
-bash run_docking_batch.sh
 ```
 ### **2.7: Convert smiles to PDBQT files**
-first open the file **prepare_ligands.py**
+1. First open the file **prepare_ligands.py**
 change the line:
 ```python
 input_smiles_file = "your_smiles_file.smi"  # <--- CHANGE THIS to process a different SMILES file
 ```
-and then in the terminal run:
+2. then, in the terminal, run:
 ```bash
 prepare_ligands.py
 ```
 ### **2.8: Run docking**
-first make sure you have the right setup:
+* First make sure you have the right setup:
 ```shell
  === Configuration ===
 # 1. FULL PATH to your compiled AutoDock-GPU executable
@@ -140,12 +139,12 @@ OUTPUT_DIR="docking_results_compiled"
 NUM_RUNS="10"              # Number of docking runs per ligand
 DEVICE_NUMBER="2"          # SET THIS to the GPU device number (e.g., 1 for the first GPU, 2 for the second) only if you use run_docking_with_gpu.sh
 ```
-then run:
+* Then run:
 
 ```bash
 bash run_docking_batch.sh
 ```
-Or with gpu selection:
+* Or with gpu selection:
 ```bash
 bash run_docking_with_gpu.sh
 ```
