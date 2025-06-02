@@ -120,11 +120,11 @@ input_smiles_file = "your_smiles_file.smi"  # <--- CHANGE THIS to process a diff
 prepare_ligands.py
 ```
 3. if you wanna use parallized distrubtion for prepare ligands (useful if you have many molecuels to process), use:
-   ```bash
+```bash
    python prepare_ligands_parallel.py
-   ```
-   remeber to edit the file first and specify the number of threads you have, i have 32 so i used:
-   ```python
+ ```
+* Remember to edit the file first and specify the number of threads you have, i have 32 so i used:
+```python
    if __name__ == "__main__":
     prepare_ligands_from_smiles(
         smiles_file="undocked_smiles.smi",
