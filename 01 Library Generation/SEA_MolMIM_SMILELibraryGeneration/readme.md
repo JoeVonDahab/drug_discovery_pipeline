@@ -67,8 +67,6 @@ To generate a molecule:
 2.  Adjust API call 
 3.  Consider monitoring convergence (Not yet implemented in this notebook) 
 
-**(I want to insert an image here. Please leave a reminder)**
-
 <img width="316" alt="SingleSubmissionSMILEstring" src="https://github.com/user-attachments/assets/90f48de3-159b-4f02-80f8-bc453b6df4e5" />
 
 ### Batch Processing
