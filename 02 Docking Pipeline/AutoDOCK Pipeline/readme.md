@@ -104,8 +104,7 @@ The `myreceptor_targeted.gpf` file was manually edited:
 
 1.  The `ligand_types` line was corrected to remove duplicate/case-variant types (e.g., `CL` was removed, keeping `Cl`; `BR` was removed, keeping `Br`).
 2.  To ensure the number of types was within AutoGrid's limit (~14 types, as you found worked), types like `Si` and `B` were also removed from the `ligand_types` line (assuming they are not essential for the specific receptor/ligands in this study).
-    * **final file can be found in the dictionary:
-* `-`: myreceptor_targeted.glg
+    * **final file can be found in the dictionary8**
 ### **2.6: Then autogrid and docking commands:**
 ```bash
 autogrid4 -p myreceptor_targeted.gpf -l myreceptor_targeted.glg
