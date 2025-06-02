@@ -49,9 +49,11 @@ A docking box was used to define the binding site. Only ligands whose docked pos
     it contains code for result analysis and visualization 
 ---
 ### **PT2385 superimposed:**
-![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/dc97889a-657a-44f0-ae64-caef58b76898)
- 
+
+![PT2385 superimposed](https://github.com/user-attachments/assets/6a20b8e3-2aa7-44ad-add9-ca541d28e34c)
+
  ### top compound imposed with crystal structure ligand:
+ 
 ![WhatsApp Image 2025-05-31 at 23 20 55_11bc8624](https://github.com/user-attachments/assets/eeaa7de0-2362-4128-9c91-4ab91ab5cabe)
 
 #### Data for top 100 compound 
