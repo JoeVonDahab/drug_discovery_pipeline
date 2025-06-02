@@ -1,10 +1,10 @@
 # Purpose
 
-Description of SMILE generation utilizing literature search, the Similarity Ensemble Approach, and molecular generation using Mutual Information Machine (MoIMIM) for diversification of known drugs. [cite: 1]
+Description of SMILE generation utilizing literature search, the Similarity Ensemble Approach, and molecular generation using Mutual Information Machine (MoIMIM) for diversification of known drugs. 
 
 # Contents
 
-The following table describes the contents of this project: [cite: 2, 3]
+The following table describes the contents of this project:
 
 | Item                                         | Description                                                                                                |
 | :------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
@@ -16,25 +16,25 @@ The following table describes the contents of this project: [cite: 2, 3]
 
 # Similarity Ensemble Approach
 
-Purpose: to use the SEA to diversify the library of small molecules that was discovered during a literature search. [cite: 4]
+Purpose: to use the SEA to diversify the library of small molecules that was discovered during a literature search. 
 
-* Took molecule SMILES from our literature list and individually searched SEA [cite: 4]
-* Of the molecules that pass the P-Value threshold of (10^-15) were considered [cite: 4]
-* If the molecule's ZINC results page had drug substances, a .smi file was saved. [cite: 4]
-* If the molecule's ZINC results page had no drug substances matched, molecules from the high affinity .smi files were saved from the Highest Affinity Substances list [cite: 5]
-* Drug substances were saved because they have been noted to have biological relevance. [cite: 5, 6]
+* Took molecule SMILES from our literature list and individually searched SEA 
+* Of the molecules that pass the P-Value threshold of (10^-15) were considered 
+* If the molecule's ZINC results page had drug substances, a .smi file was saved. 
+* If the molecule's ZINC results page had no drug substances matched, molecules from the high affinity .smi files were saved from the Highest Affinity Substances list 
+* Drug substances were saved because they have been noted to have biological relevance. 
 
 # MolMIM
 
-Purpose: To implement a controlled iterative method of molecule generation [cite: 6]
+Purpose: To implement a controlled iterative method of molecule generation 
 
 ## Set up:
 
-1.  Create an .env file containing your NVIDIA API key and place it in the same directory as the scripts. [cite: 7]
+1.  Create an .env file containing your NVIDIA API key and place it in the same directory as the scripts. 
 
 ## NVIDIA API Call Parameters
 
-The following table describes the parameters used for the NVIDIA API call: [cite: 9]
+The following table describes the parameters used for the NVIDIA API call: 
 
 | API parameter  | Current options | Description                                                                                                |
 | :------------- | :-------------- | :--------------------------------------------------------------------------------------------------------- |
@@ -54,50 +54,52 @@ The following table describes the parameters used for the NVIDIA API call: [cite
 
 Expected inputs:
 
-* SMILE Strings [cite: 10]
-* NVIDIA API Call parameters (See table 1.) [cite: 10]
+* SMILE Strings 
+* NVIDIA API Call parameters (See table 1.) 
 
 Expected outputs:
 
-* Table of generated molecules with physical property scores Data frame saved as a CSV file [cite: 10]
+* Table of generated molecules with physical property scores Data frame saved as a CSV file 
 
 To generate a molecule:
 
-1.  In the Starting Molecule cell change the input molecule [cite: 10]
-2.  Adjust API call [cite: 10]
-3.  Consider monitoring convergence (Not yet implemented in this notebook) [cite: 10]
+1.  In the Starting Molecule cell change the input molecule 
+2.  Adjust API call 
+3.  Consider monitoring convergence (Not yet implemented in this notebook) 
 
 **(I want to insert an image here. Please leave a reminder)**
 
+<img width="316" alt="SingleSubmissionSMILEstring" src="https://github.com/user-attachments/assets/90f48de3-159b-4f02-80f8-bc453b6df4e5" />
+
 ### Batch Processing
 
-Purpose: To leverage an automated system for SMILE generation. [cite: 11]
+Purpose: To leverage an automated system for SMILE generation. 
 
 Expected inputs:
 
-* .smi file [cite: 12]
-* NVIDIA API Call parameters (See table 1.) [cite: 12]
+* .smi file 
+* NVIDIA API Call parameters (See table 1.) 
 
 Expected outputs:
 
-* Table of generated molecules with physical property scores Data frame saved as a CSV file [cite: 12]
+* Table of generated molecules with physical property scores Data frame saved as a CSV file 
 
 To generate molecules:
 
-1.  Change the input .smi file (at the end of the script) [cite: 12]
-2.  Adjust API call [cite: 12]
-3.  Consider monitoring convergence (Not yet implemented in this notebook) [cite: 12]
+1.  Change the input .smi file (at the end of the script) 
+2.  Adjust API call 
+3.  Consider monitoring convergence (Not yet implemented in this notebook) 
 
 # Sources
 
 **MolMIM**
 
-* Nikolaus Hansen. The CMA Evolution Strategy. 2005 [cite: 13]
-* A. Auger, N. Hansen: Tutorial CMA-ES: Evolution Strategies and Covariance Matrix Adaptation. 2012 [cite: 13, 14]
+* Nikolaus Hansen. The CMA Evolution Strategy. 2005 
+* A. Auger, N. Hansen: Tutorial CMA-ES: Evolution Strategies and Covariance Matrix Adaptation. 2012 
 
 **SEA**
 
-* Keiser MJ, Roth BL, Armbruster BN, Ernsberger P, Irwin JJ, Shoichet BK. Relating protein pharmacology by ligand chemistry. Nat Biotech 25 (2), 197-206 (2007) [cite: 14, 15]
+* Keiser MJ, Roth BL, Armbruster BN, Ernsberger P, Irwin JJ, Shoichet BK. Relating protein pharmacology by ligand chemistry. Nat Biotech 25 (2), 197-206 (2007) 
 
 Workshop notebook
 
