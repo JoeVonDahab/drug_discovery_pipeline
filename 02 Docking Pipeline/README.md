@@ -130,26 +130,105 @@ This script is provided "as-is" under the MIT License. You are responsible for s
 ### Support
 For API documentation or further support, visit NVIDIA BioNeMo.
 
-# DiffDock Result Processor
+# Docking Pipeline - Ligand Confidence Extraction
 
-This Python script automates the extraction and analysis of molecular docking results returned by the [NVIDIA BioNeMo DiffDock](https://developer.nvidia.com/nvidia-bionemo) API. It processes docking outputs from multiple ligands, saves poses and scores, and ranks ligands by their highest pose confidence.
-
----
+This Python script processes docking results to extract ligand poses, save them into appropriate formats (PDB and SDF), and calculate confidence scores. It identifies the top 100 ligands with the highest confidence scores and provides a summary of the results.
 
 ## Features
 
-- Parses `response_text.txt` JSON outputs for each ligand
-- Extracts and saves:
-  - 3D protein-ligand poses in PDB format
-  - Ligand conformers in SDF format
-  - Confidence scores for each pose
-- Computes and ranks ligands by their highest confidence scores
-- Outputs the top 100 ligands by docking confidence
+- **Input**: JSON file containing ligand docking results (`response_text.txt`).
+- **Outputs**:
+  - PDB files for each ligand pose.
+  - SDF files for each ligand position.
+  - A summary file containing the confidence scores for each pose.
+  - A ranking of the top 100 ligands based on their confidence scores.
 
----
+## Prerequisites
+
+Ensure that you have the required Python environment with the necessary packages. This script assumes that the input data follows a particular structure and the files are stored in a specific directory layout.
+
+- Python 3.x
+- Required Libraries:
+  - `json`
+  - `os`
 
 ## Directory Structure
 
-Make sure your directories follow this structure:
+The script expects the following directory structure:
+
+<base_path>
+│
+├── ligand_<i>
+│ ├── response_text.txt
+│ └── diffdock_actual_outcome
+│ ├── pose_1.pdb
+│ ├── ligand_pose_1.sdf
+│ ├── ...
+│ └── pose_confidences.txt
+│
+└── top_100_ligands_by_confidence.txt
+
+
+Where:
+- `<base_path>`: The root folder containing the ligand subfolders (e.g., `ligand_0`, `ligand_1`, etc.).
+- `response_text.txt`: JSON file containing the docking results for each ligand.
+- `diffdock_actual_outcome`: Output directory for each ligand containing PDB, SDF files, and confidence scores.
+
+## Code Explanation
+
+### Step 1: Read Input Data
+The script reads `response_text.txt` (JSON) from each ligand folder. This file contains:
+- **Trajectory** (`data["trajectory"]`): PDB poses for each ligand.
+- **Ligand Positions** (`data["ligand_positions"]`): SDF representations of ligand positions.
+- **Confidence Scores** (`data["position_confidence"]`): Confidence values for the ligand poses.
+
+### Step 2: Write Output Files
+For each ligand:
+1. PDB files (`pose_X.pdb`) are written into the `diffdock_actual_outcome` folder.
+2. SDF files (`ligand_pose_X.sdf`) are written for each ligand's position.
+3. A file `pose_confidences.txt` is generated with a rank and corresponding confidence for each pose.
+
+### Step 3: Calculate Top 100 Ligands by Confidence
+- For each ligand, the script extracts the highest valid confidence score.
+- Ligands are ranked based on their highest confidence, and the top 100 ligands are selected.
+- An average confidence score is computed for the top 100 ligands.
+
+### Step 4: Output Summary
+The results of the top 100 ligands are written into a summary file `top_100_ligands_by_confidence.txt` that includes:
+- Ligand ID
+- Corresponding confidence score
+- Average confidence score for the top 100 ligands
+
+### Example Output:
+
+Top 100 ligands by highest confidence score:
+
+Ligand ID Confidence Score
+ligand_0 0.9843
+ligand_1 0.9711
+...
+ligand_99 0.9374
+
+Average confidence score: 0.9512
+
+
+### Step 5: Summary and Printing
+The script prints out the number of ligands selected and the average confidence score.
+
+## Running the Script
+
+1. Modify the `base_path` variable to point to the location of your ligand folders.
+2. Ensure that the structure of each ligand folder matches the expected layout.
+3. Execute the script in your Python environment.
+
+## Notes
+
+- The script automatically skips any ligand folder that does not contain the required `response_text.txt` file.
+- The highest confidence for each ligand is selected, ignoring any `None` values in the confidence list.
+- The script sorts the ligands by confidence score in descending order and selects the top 100.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
