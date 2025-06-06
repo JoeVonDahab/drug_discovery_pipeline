@@ -129,3 +129,27 @@ This script is provided "as-is" under the MIT License. You are responsible for s
 
 ### Support
 For API documentation or further support, visit NVIDIA BioNeMo.
+
+# DiffDock Result Processor
+
+This Python script automates the extraction and analysis of molecular docking results returned by the [NVIDIA BioNeMo DiffDock](https://developer.nvidia.com/nvidia-bionemo) API. It processes docking outputs from multiple ligands, saves poses and scores, and ranks ligands by their highest pose confidence.
+
+---
+
+## Features
+
+- Parses `response_text.txt` JSON outputs for each ligand
+- Extracts and saves:
+  - 3D protein-ligand poses in PDB format
+  - Ligand conformers in SDF format
+  - Confidence scores for each pose
+- Computes and ranks ligands by their highest confidence scores
+- Outputs the top 100 ligands by docking confidence
+
+---
+
+## Directory Structure
+
+Make sure your directories follow this structure:
+
+
