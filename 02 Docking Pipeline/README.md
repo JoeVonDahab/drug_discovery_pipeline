@@ -51,3 +51,59 @@ Molecules that fail SMILES parsing or 3D embedding are skipped with a warning.
 
 ### License
 This project is open-source and free to use under the MIT License.
+
+# DiffDock Batch Submission Script using NVIDIA BioNeMo API
+
+This script automates the process of submitting multiple ligand `.sdf` files and a single protein `.pdb` receptor to NVIDIA's BioNeMo DiffDock API for molecular docking and pose prediction.
+
+---
+
+## Features
+
+- Uploads ligands and a receptor to the NVIDIA Cloud via the Asset API
+- Sends inference requests to the BioNeMo DiffDock endpoint
+- Handles API rate limiting (HTTP 429) with exponential backoff
+- Saves response status and body for each ligand in a dedicated output directory
+- Processes ligands concurrently using multithreading for efficiency
+
+---
+
+## Directory Structure
+
+Before running, make sure your project folder contains:
+
+project/
+├── receptor_clean.pdb # Your protein receptor file
+├── sdf_output/ # Folder with ligand SDF files
+│ ├── ligand_0.sdf
+│ ├── ligand_1.sdf
+│ └── ...
+├── results_output/ # Output folder (auto-created)
+└── diffdock_submit.py # This script
+
+
+---
+
+## Requirements
+
+- Python 3.7+
+- `requests` library (install via `pip install requests`)
+
+---
+
+## Authentication
+
+The script uses a bearer token in the header:
+
+```python
+header_auth = "Bearer <your_nvidia_api_token>"
+
+Replace the placeholder with your NVIDIA BioNeMo API token.
+
+### Usage
+
+Place your ligand .sdf files in the sdf_output/ directory.
+
+Ensure your receptor file is named receptor_clean.pdb and located in the root directory.
+
+Run the script:
