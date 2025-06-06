@@ -99,7 +99,7 @@ The script uses a bearer token in the header:
 header_auth = "Bearer <your_nvidia_api_token>"
 
 Replace the placeholder with your NVIDIA BioNeMo API token.
-
+```
 ### Usage
 
 Place your ligand .sdf files in the sdf_output/ directory.
@@ -107,3 +107,25 @@ Place your ligand .sdf files in the sdf_output/ directory.
 Ensure your receptor file is named receptor_clean.pdb and located in the root directory.
 
 Run the script:
+
+python diffdock_submit.py
+
+Each ligand's results will be saved in:
+
+results_output/ligand_<index>/
+├── response_status.txt
+├── request_url.txt
+└── response_text.txt
+
+### Notes
+Ligands that fail upload or inference will be skipped with an error message.
+
+API rate limits (HTTP 429) are handled with automatic retries.
+
+By default, a maximum of 3 threads is used to reduce the risk of hitting rate limits.
+
+### License
+This script is provided "as-is" under the MIT License. You are responsible for securing and managing your NVIDIA API token properly.
+
+### Support
+For API documentation or further support, visit NVIDIA BioNeMo.
