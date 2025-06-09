@@ -5,8 +5,10 @@ This folder contains the files required to run TxGemma. The 2 agents that were d
 ### 1) ```Agentic_TxGemma_Toxicity.ipynb```
 Evaluates the toxicity of the SMILE strings after passing the binding pocket fit. 2 metrics were used for toxicity evaluation:
 
-- AMES Mutagenicity: Test whether the chemical is mutagenic and therefore may act as a carcinogen. It has a reported AUROC of 0.798.
-- ClinTox: Test whether the drug is toxic based on previously failed clinical trials. It has a reported AUROC of 0.831.
+- AMES Mutagenicity: Test whether the chemical is mutagenic and therefore may act as a carcinogen.
+    - Reported AUROC of 0.798.
+- ClinTox: Test whether the drug is toxic based on previously failed clinical trials.
+    - Reported AUROC of 0.831.
 
 Combined, these 2 along with a pubmed search is fed to the agentic TxGemma for evaluation. If the drug is determined to be toxic, it will get filtered out. If the drug is determined to be not toxic, it will pass into the next agent: ```Agentic_TxGemma_PK_Prop.ipynb```.
 
