@@ -232,8 +232,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Jupyter**: Interactive development environment
 
 ### 👥 Team
-- Lead Developer: [@Socks2109](https://github.com/Socks2109)
-- Contributor: [@JoeVonDahab](https://github.com/JoeVonDahab)
+- **Isaac Yeoh** (TxGemma) — [@Socks2109](https://github.com/Socks2109)  
+- **Youssef Abo-Dahab** (AutoDock) — [@JoeVonDahab](https://github.com/JoeVonDahab)  
+- **Shyiang** (DiffDock, Piepline connecting) — [@abcdefucsb](https://github.com/abcdefucsb)  
+- **Somayeh Motevalli** (TxGemma) — [@SomayehMotevalli](https://github.com/SomayehMotevalli)  
+- **Miko Mallari** (MolMIM) — [@mf-mallari](https://github.com/mf-mallari)
 
 ---
 
