@@ -39,35 +39,28 @@ This project integrates artificial intelligence with computational drug discover
 
 ## 🏗️ Project Structure
 
-```
-Drug_Discovery_Project/
-├── 📁 01 Library Generation/        # Compound library generation using MolMIM
-│   ├── SEA_MolMIM_SMILELibraryGeneration/
-│   └── smiles/                      # SMILES validation and processing
-│
-├── 📁 02 Docking Pipeline/          # Molecular docking with DiffDock
-│   ├── AutoDOCK Pipeline/           # Alternative docking methods
-│   └── results/                     # Docking results and analysis
-│
-├── 📁 03 TxGemma Pipeline/          # Toxicity & PK property prediction
-│   ├── Agentic_TxGemma_Toxicity.ipynb
-│   └── Agentic_TxGemma_PK_Prop.ipynb
-│
-├── 📁 04 Final Workflow/            # Integrated pipeline execution
-│
-├── 📁 DEMO/                         # Complete demonstration workflow
-│   ├── DEMO.ipynb                  # Step-by-step pipeline demo
-│   ├── ligand_images/              # Molecular visualizations
-│   └── results_output/             # Example outputs
-│
-├── 📁 Final_Results/                # Curated final compound recommendations
-│   ├── top_37_ligand_smiles_actives.txt
-│   ├── top_19_ligand_smiles_inactives.txt
-│   └── top_40935_ligand_scores.txt
-│
-├── 📁 Some_Helper_Functions/        # Utility scripts
-└── 📁 Some_Results/                 # Intermediate analysis results
-```
+| Folder / File                          | Description                                      |
+|---------------------------------------|--------------------------------------------------|
+| `01 Library Generation/`              | Compound library generation using MolMIM        |
+| ├── `SEA_MolMIM_SMILELibraryGeneration/` | Core generation logic                        |
+| └── `smiles/`                          | SMILES validation and processing                |
+| `02 Docking Pipeline/`                | Molecular docking with DiffDock                 |
+| ├── `AutoDOCK Pipeline/`              | Alternative docking methods                     |
+| └── `results/`                        | Docking results and analysis                    |
+| `03 TxGemma Pipeline/`                | Toxicity & PK property prediction               |
+| ├── `Agentic_TxGemma_Toxicity.ipynb`  | Toxicity prediction notebook                    |
+| └── `Agentic_TxGemma_PK_Prop.ipynb`   | PK property prediction notebook                 |
+| `04 Final Workflow/`                  | Integrated pipeline execution                   |
+| `DEMO/`                               | Complete demonstration workflow                 |
+| ├── `DEMO.ipynb`                      | Step-by-step pipeline demo                      |
+| ├── `ligand_images/`                  | Molecular visualizations                        |
+| └── `results_output/`                 | Example outputs                                 |
+| `Final_Results/`                      | Curated final compound recommendations          |
+| ├── `top_37_ligand_smiles_actives.txt`   | Top actives                                     |
+| ├── `top_19_ligand_smiles_inactives.txt` | Top inactives                                   |
+| └── `top_40935_ligand_scores.txt`        | All scored ligands                              |
+| `Some_Helper_Functions/`              | Utility scripts                                 |
+| `Some_Results/`                       | Intermediate analysis results                   |
 
 ## 🔧 Installation & Setup
 
