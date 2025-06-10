@@ -195,12 +195,13 @@ The `DEMO/` directory contains a complete walkthrough:
 - **Visualizations**: Molecular structures and binding poses
 - **Performance Analysis**: Comprehensive metrics and comparisons
 
-## 📚 Documentation
+## 📚 Detailed Documentation
 
-Detailed documentation for each component:
 - [Library Generation Guide](./01%20Library%20Generation/SEA_MolMIM_SMILELibraryGeneration/readme.md)
 - [Docking Pipeline Manual](./02%20Docking%20Pipeline/README.md)
 - [TxGemma Documentation](./03%20TxGemma%20Pipeline/README.md)
+- [AutoDock Documentation](https://github.com/JoeVonDahab/drug_discovery_pipeline/blob/main/02%20Docking%20Pipeline/AutoDOCK%20Pipeline/readme.md)
+
 
 ## 🤝 Contributing
 
