@@ -1,7 +1,7 @@
 # this goes results/docking_results_ranked_docked.csv and find which smiles are docked and separeate smiles that are not docked from smile file
 import pandas as pd
 
-csv_file_path = 'results/docking_results_ranked_docked.csv' # Path to the CSV file containing docking results
+csv_file_path = 'docking_results_ranked_docked.csv' # Path to the CSV file containing docking results
 smiles_file_path = '1m.smi' # Path to the SMILES file containing all compounds
 new_smiles_file_path = 'undocked_smiles.smi'    # Path to save the undocked SMILES
 csv_data = pd.read_csv(csv_file_path)
