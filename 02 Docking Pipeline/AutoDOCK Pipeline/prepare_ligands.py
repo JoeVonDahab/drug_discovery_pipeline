@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
     # 1. Set the path to YOUR input SMILES file
     #    Examples: "actives.smi"
-    input_smiles_file = "undocked_100K_part1.smi"  # <--- CHANGE THIS to process a different SMILES file
+    input_smiles_file = "undocked_smiles.smi"  # <--- CHANGE THIS to process a different SMILES file
 
     # 2. Set the name for the directory where PDBQT files will be saved
     #    This directory will be created if it doesn't exist.
