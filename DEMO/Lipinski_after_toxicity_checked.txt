@@ -1,119 +1,674 @@
-SMILES: CS(=O)(=O)C1=C2[C@H](O)C(F)(F)CC2=C(OC2=CC(=CC(F)=C2)C#N)C=C1
-Response: Yes, the drug with the SMILES string CS(=O)(=O)C1=C2[C@H](O)C(F)(F)CC2=C(OC2=CC(=CC(F)=C2)C#N)C=C1 is predicted to be **toxic**.
+Rank: 1
+Ligand Number: 10
+SMILES: O=[N+]([O-])c1c(Nc2ccc(Br)cc2)ccc2nonc12
+Confidence Score: 0.8186
+Response: Yes, the drug with the SMILES string O=[N+]([O-])c1c(Nc2ccc(Br)cc2)ccc2nonc12 is predicted to be toxic.
 
-The primary reason for its predicted toxicity is the presence of the **nitrile (-C#N)** functional group. Nitriles can be metabolized in the body to release cyanide ions. These cyanide ions are highly toxic and interfere with cellular respiration by inhibiting cytochrome c oxidase, an enzyme critical for energy production. While the molecule also contains fluorine atoms, the nitrile group is a more common and potent source of acute toxicity in drug molecules due to its metabolic activation to cyanide.
+The toxicity is primarily due to the presence of two key functional groups, which are well-known toxicophores:
 
-To mitigate this toxicity, you could replace the nitrile group with a metabolically stable bioisostere. Suitable functional groups for replacement include:
+1.  **Nitro group (O=[N+]([O-]) ):** When attached to an aromatic ring, nitro groups can be metabolically reduced by enzymes (e.g., nitroreductases) in the body. This reduction process generates highly reactive intermediates such as nitroso compounds, hydroxylamines, and eventually aromatic amines. These intermediates are electrophilic and can bind covalently to crucial cellular macromolecules like DNA and proteins. This covalent binding can lead to:
+    *   **Genotoxicity and Mutagenicity:** Causing damage to DNA and inducing mutations.
+    *   **Carcinogenicity:** Through the formation of DNA adducts and subsequent mutations, which can contribute to cancer development.
+    *   **Oxidative Stress:** Generation of reactive oxygen species (ROS) during the metabolic reduction, leading to cellular damage.
+    *   **Methemoglobinemia:** By oxidizing hemoglobin, impairing its oxygen-carrying capacity.
 
-*   **Tetrazole**: This can mimic the electronic and steric properties of a nitrile while being metabolically stable and often behaving as a carboxylic acid mimetic.
-*   **Carboxylic acid**: This functional group can also act as an acidic group and is generally well-tolerated and metabolically stable in the body.
+2.  **Aromatic Amine (-Nc2ccc(Br)cc2):** Aromatic amines, especially N-substituted derivatives like the one present, are also significant toxicophores. They undergo N-oxidation, predominantly by cytochrome P450 enzymes. The N-hydroxylated metabolites formed can then be further metabolized (e.g., through sulfation or glucuronidation) into highly reactive electrophilic species, such as nitrenium ions. These reactive species can:
+    *   **Genotoxicity and Carcinogenicity:** Covalently bind to DNA, forming DNA adducts that can lead to mutations and are strongly implicated in the development of cancers, particularly bladder cancer.
+    *   **Methemoglobinemia:** Oxidize the ferrous iron in hemoglobin to the ferric state, reducing the blood's oxygen transport ability.
+    *   **Hepatotoxicity:** Cause damage to liver cells due to the formation of these reactive metabolites.
+
+The **bromine atom (-Br)** on the aromatic ring, while not a primary toxicophore itself, can influence the molecule's lipophilicity, electronic properties, and metabolic fate, potentially contributing to its overall reactivity and sometimes leading to idiosyncratic reactions. However, the nitro and amine functionalities are the main drivers of the predicted toxicity.
+
+To suggest functional group replacements for the toxic sections:
+
+1.  **For the Nitro group (O=[N+]([O-]) ):**
+    *   **Nitrile (-CN):** A polar group with similar electron-withdrawing properties but generally not prone to the same reductive metabolism as a nitro group.
+    *   **Sulfonyl groups (-SO2R) or Sulfonamides (-SO2NHR):** These are stable, electron-withdrawing groups often used in drug design.
+    *   **Trifluoromethyl (-CF3):** A strong electron-withdrawing group that is metabolically stable.
+    *   **Halogens (Cl, F):** If a less polar electron-withdrawing effect is desired. Fluorine is often preferred due to its metabolic stability and size.
+    *   **Hydrogen (-H) or small alkyl groups (-CH3):** If the electron-withdrawing effect of the nitro group is not critical for the desired therapeutic activity.
+
+2.  **For the Aromatic Amine ( -NH-Ar ):** The goal is to reduce its basicity and susceptibility to N-oxidation.
+    *   **Amide (-NHCOR) or Sulfonamide (-NHSO2R):** These groups are significantly less basic and generally more metabolically stable, making N-oxidation much less likely.
+    *   **Carbamate (-NHCOOR):** Similar to amides, offering improved metabolic stability.
+    *   **Incorporation into Heterocyclic Rings:** If a basic nitrogen is functionally required, placing it within a stable heterocyclic ring (e.g., pyridine, pyrimidine, imidazole) can reduce its susceptibility to oxidative metabolism compared to an open-chain aromatic amine.
+    *   **Replacing N-H with N-alkyl or N-aryl groups:** While N-substitution can alter metabolic pathways, it doesn't always eliminate the risk of reactive metabolite formation. Prioritizing the conversion to amides or sulfonamides is generally a safer approach for mitigating toxicity.
+
+3.  **For the Bromine atom (-Br):**
+    *   **Fluorine (-F) or Chlorine (-Cl):** These are less reactive halogens. Fluorine is often chosen for its metabolic stability and ability to influence lipophilicity and binding.
+    *   **Hydrogen (-H):** If the substituent is not essential for the molecule's activity.
+    *   **Methyl (-CH3) or Methoxy (-OCH3):** Non-halogen alternatives that can influence lipophilicity and electronic properties.
+
+**Important Considerations:**
+After making these modifications, it is crucial to perform thorough toxicity testing (both in vitro and in vivo) to confirm the reduction in toxicity. Additionally, ensuring that the desired therapeutic activity is retained or even improved after these structural changes is paramount. The specific choice of replacement groups will depend on the precise role of the original functional group in the molecule's overall biological activity and pharmacokinetic profile.
 ============================================================
-SMILES: C1C2=C(C=CC(=C2[C@@H](C1(F)F)O)S(=O)(=O)C(F)F)OC3=CC(=CC(=C3)C#N)F
-Response: The provided SMILES string, `C1C2=C(C=CC(=C2[C@@H](C1(F)F)O)S(=O)(=O)C(F)F)OC3=CC(=CC(=C3)C#N)F`, represents a complex organic molecule.
-
-**Yes, this drug is predicted to be toxic.**
+Rank: 2
+Ligand Number: 7
+SMILES: COc1cccc(Nc2ccc3nonc3c2[N+](=O)[O-])c1
+Confidence Score: 0.8161
+Response: Yes, the drug with the SMILES string `COc1cccc(Nc2ccc3nonc3c2[N+](=O)[O-])c1` is predicted to be toxic.
 
 **Properties that make it toxic:**
 
-1.  **Nitrile Group (-C#N):** This is the most significant concern. Nitriles can be metabolically activated, primarily by cytochrome P450 enzymes, leading to the release of free cyanide (CN-). Cyanide is a highly toxic substance that inhibits mitochondrial cytochrome c oxidase, thus disrupting cellular respiration and energy production, leading to severe cellular damage and potentially death. Even if not fully hydrolyzed to free cyanide, some nitriles can form reactive intermediates.
+The predicted toxicity is primarily attributed to two key functional groups present in the molecule:
 
-2.  **High Fluorine Content (Polyfluorinated Moieties):** The molecule contains several highly fluorinated sections:
-    *   **Gem-difluorocyclopropane (`C1(F)F` within the cyclopropane ring):** While fluorine is often used in medicinal chemistry to improve metabolic stability and lipophilicity, geminal difluorination, especially within a strained ring system like cyclopropane, can alter metabolic pathways in unpredictable ways. In some cases, it can lead to the formation of reactive acyl fluorides or other problematic metabolites, though this is less common for stable C-F bonds. It generally increases lipophilicity which can contribute to bioaccumulation.
-    *   **Trifluoromethanesulfonyl Group (`-S(=O)(=O)C(F)F`):** This is a very strong electron-withdrawing group. While useful for its electronic properties and metabolic stability, an abundance of highly fluorinated groups can contribute to overall high lipophilicity, potentially leading to bioaccumulation and prolonged systemic exposure. Additionally, some fluorinated compounds can cause specific organ toxicities (e.g., liver or kidney) if defluorination or other adverse metabolic pathways are triggered.
+1.  **Nitro group (`-NO2`)**: A nitro group, especially when attached to an aromatic ring, is a well-known structural alert for toxicity. Nitro groups can be metabolically reduced *in vivo* by enzymes like nitroreductases to form highly reactive intermediates such as nitroso, hydroxylamine, and ultimately amine derivatives. These reactive species can cause oxidative stress, damage cellular macromolecules (like DNA and proteins), leading to genotoxicity, mutagenicity, and potentially carcinogenicity.
 
-3.  **Potential for Metabolic Stability and Bioaccumulation:** The combination of multiple fluorine atoms and relatively stable bonds (like the aryl ether) might lead to slower metabolism and excretion rates. This could result in bioaccumulation of the parent compound and/or its metabolites, increasing the duration and intensity of exposure to potentially toxic substances, and raising the risk of long-term adverse effects.
+2.  **Aromatic Amine (`-NH-Ar`)**: The molecule contains a secondary aromatic amine linkage (specifically, an N-aryl bond). Aromatic amines are susceptible to metabolic activation, typically through N-oxidation catalyzed by cytochrome P450 enzymes (e.g., CYP1A2). The resulting N-hydroxylated metabolites can then undergo further activation (e.g., by N-acetyltransferases or sulfotransferases) to form highly electrophilic species that can covalently bind to DNA, forming DNA adducts. This DNA damage is a major mechanism contributing to genotoxicity and carcinogenicity.
 
-**Suggested Functional Group Replacements to Mitigate Toxicity:**
+The co-occurrence of both a nitro group and an aromatic amine in the same molecule often exacerbates the toxic potential due to potentially converging or synergistic metabolic activation pathways.
 
-To reduce the toxicity, especially from the most concerning functional groups, consider the following replacements:
+**Suggested functional group replacements to mitigate toxicity:**
 
-1.  **For the Nitrile (-C#N) Group:** This is the highest priority for replacement due to the severe risk of cyanide release.
-    *   **Amide (-CONH2):** This is a very common and generally safe bioisostere for nitriles. It removes the risk of cyanide liberation, adds polarity, and is metabolically stable.
-    *   **Tetrazole (e.g., C-linked or N-linked):** A metabolically stable heterocyclic bioisostere that can mimic the electronic and steric properties of a carboxylic acid or a nitrile, often enhancing water solubility without the toxicity concerns.
-    *   **Carboxylic Acid (-COOH) or Ester (-COOR):** These introduce acidity and polarity. While esters can be hydrolyzed to acids, they are generally much safer than nitriles.
-    *   **Oxadiazole or Thiadiazole (e.g., 1,2,4-oxadiazole):** Other heterocycles that can serve as bioisosteric replacements, offering different physicochemical properties and often improved metabolic stability.
+To reduce the toxic profile while aiming to maintain or improve the drug's therapeutic properties, consider replacing the problematic functional groups with safer bioisosteres:
 
-2.  **For the Trifluoromethanesulfonyl (-S(=O)(=O)C(F)F) Group:**
-    *   **Methyl Sulfonyl (-S(=O)(=O)CH3):** This replaces the highly fluorinated methyl group with a non-fluorinated one, which can reduce overall lipophilicity and potential metabolic burden associated with excessive fluorination, while still retaining a strong electron-withdrawing character.
-    *   **Sulfonamide (-S(=O)(=O)NH2):** Introducing an NH2 group provides polarity and hydrogen bonding capabilities, often improving solubility and reducing potential reactivity compared to a simple sulfonyl group, making it generally safer.
-    *   **Simple Alkyl Chain or Halogen:** Depending on the desired electronic and steric properties in that region of the molecule, replacing it with a simple alkyl chain (e.g., -CH3, -C2H5) or a less reactive halogen (e.g., -Cl) could reduce the strong electron-withdrawing effects and associated liabilities.
+1.  **For the Nitro Group (`-NO2`):**
+    *   **Cyano group (`-CN`)**: This is a common bioisostere for the nitro group. It is electron-withdrawing and generally metabolically stable, reducing the likelihood of reactive intermediate formation.
+    *   **Trifluoromethyl group (`-CF3`)**: Also electron-withdrawing and metabolically stable, it can sometimes mimic the electronic and steric properties of a nitro group without its metabolic liabilities.
+    *   **Halogens (e.g., `-F`, `-Cl`)**: These are metabolically stable, electron-withdrawing, and can be used to tune electronic properties and lipophilicity.
+    *   **Sulfonyl derivatives (e.g., `-SO2CH3`)**: While not a direct electronic mimic, a methylsulfonyl group can sometimes provide electron-withdrawing character without the inherent toxicity of a nitro group.
 
-3.  **For the Gem-Difluorocyclopropane Ring:**
-    *   **Non-fluorinated Cyclopropane or Cyclobutane:** Removing the fluorine atoms from the ring would eliminate the specific concerns related to aliphatic fluorination while potentially maintaining a similar cyclic structure and conformational rigidity.
-    *   **Flexible Alkyl Chain:** Replacing the strained cyclopropane ring with a flexible, non-fluorinated alkyl chain (e.g., -CH2CH2-) would significantly alter the molecule's conformation and lipophilicity, but it removes the potentially problematic strained, fluorinated ring system.
+2.  **For the Aromatic Amine (`-NH-Ar`):**
+    *   **Amide linkage (`-NHCO-` or `-CONH-`)**: Replacing the secondary amine with an amide linkage is a highly effective strategy. Amides are significantly more stable to N-oxidation and are much less likely to form reactive, DNA-damaging metabolites. This is one of the most common and effective ways to detoxify aromatic amine-containing compounds.
+    *   **Ether linkage (`-O-`)**: If the electronic and conformational requirements of the linker allow, an oxygen atom can replace the nitrogen, completely removing the problematic amine functionality.
+    *   **Sulfonamide linkage (`-NHSO2-` or `-SO2NH-`)**: Sulfonamides are generally more metabolically stable than simple amines and are less prone to oxidative activation at the nitrogen atom.
+    *   **Alkyl linker (e.g., `-CH2-CH2-`)**: If the nitrogen's specific electronic and hydrogen-bonding roles are not critical, replacing the entire amine with a metabolically stable carbon chain could be an option.
+    *   **Incorporation into a stable heterocyclic ring**: In some cases, the nitrogen might be incorporated into a less reactive, metabolically stable heterocyclic ring system if the overall structure permits.
 
-It is critical to understand that any functional group replacement will significantly alter the molecule's overall properties, including its pharmacological activity, pharmacokinetics (absorption, distribution, metabolism, excretion), and indeed its new toxicity profile. Thorough re-evaluation through computational modeling and experimental validation would be necessary for any proposed new compound.
+The choice of replacement should be guided by careful consideration of how these modifications will affect the molecule's interaction with its biological target (e.g., hydrogen bonding, electronic properties, lipophilicity, steric bulk) to ensure that efficacy is maintained or improved while significantly reducing toxicity. Further *in silico* and *in vitro* studies would be essential to validate the safety and efficacy of any modified compounds.
 ============================================================
-SMILES: CS(=O)(=O)c1ccc(Oc2cc(F)cc(C#N)c2)c2c1[C@H](O)[C@H](F)[C@@H]2F
-Response: Yes, the drug molecule with the SMILES string `CS(=O)(=O)c1ccc(Oc2cc(F)cc(C#N)c2)c2c1[C@H](O)[C@H](F)[C@@H]2F` is predicted to be toxic.
+Rank: 3
+Ligand Number: 9
+SMILES: O=[N+]([O-])c1c(Nc2ccc(Cl)cc2)ccc2nonc12
+Confidence Score: 0.7220
+Response: Yes, the drug with the SMILES string `O=[N+]([O-])c1c(Nc2ccc(Cl)cc2)ccc2nonc12` is predicted to be toxic.
 
-The properties and functional groups that likely contribute to its toxicity include:
+**Properties that make it toxic (Toxicophores):**
 
-1.  **Nitrile Group (-C≡N)**: The nitrile group is present in the `c2cc(F)cc(C#N)c2` part of the molecule. Nitriles can sometimes be metabolically activated to form reactive intermediates, or they can lead to off-target effects. A significant concern with nitriles, especially in lipophilic compounds, is their potential to inhibit the hERG potassium channel, which can lead to cardiac arrhythmias (cardiac toxicity).
+1.  **Nitro Group (`-NO2`)**: The presence of a nitro group (`O=[N+]([O-])`) on the aromatic ring is a significant concern. Nitro groups are often metabolized by nitroreductases (e.g., in the liver or gut microbiome) to highly reactive intermediates such as nitroso, hydroxylamine, and amino derivatives. These intermediates can:
+    *   **Form DNA adducts**: Leading to genotoxicity and potential carcinogenicity.
+    *   **Cause oxidative stress**: By generating reactive oxygen species.
+    *   **Induce methemoglobinemia**: Particularly if reduced to hydroxylamines and then N-oxidized.
+    *   **Lead to idiosyncratic liver toxicity**.
 
-2.  **Sulfone Group (-SO2-)**: The `CS(=O)(=O)` part of the molecule contains a sulfone. While generally stable, sulfone groups can influence a molecule's pharmacokinetic properties, potentially leading to slow clearance and accumulation, or in some cases, metabolic liabilities that contribute to toxicity.
+2.  **Aromatic Amine/Chloroaniline Moiety (`-NH-C6H4-Cl`)**: The N-phenylamine (aniline) derivative, especially substituted with chlorine, is another major toxicophore. Aromatic amines are susceptible to metabolic activation primarily through N-hydroxylation by cytochrome P450 enzymes. The resulting N-hydroxyarylamines can then undergo further reactions (e.g., O-acetylation or sulfation) to form highly electrophilic nitrenium ions, which can:
+    *   **Covalently bind to DNA and proteins**: Leading to genotoxicity, carcinogenicity (e.g., bladder carcinogens), and immunotoxicity.
+    *   **Cause methemoglobinemia**: Similar to nitro compounds, through oxidative stress on red blood cells.
+    *   The chlorine atom can influence the metabolism and reactivity of the aniline, potentially making it more or less prone to activation depending on its position and the overall electronic environment.
 
-3.  **High Lipophilicity and Multiple Fluorine Atoms**: The presence of multiple aromatic rings, a sulfone, and three fluorine atoms (`F` at `c2cc(F)cc(C#N)c2` and two `F` in the `[C@H](O)[C@H](F)[C@@H]2F` part) suggests that the molecule is highly lipophilic. High lipophilicity often correlates with poor aqueous solubility, increased potential for non-specific binding to proteins and membranes, accumulation in tissues (e.g., liver), and off-target pharmacological effects, including hepatotoxicity and cardiac toxicity (e.g., hERG inhibition, as also noted for nitriles). Highly fluorinated systems can sometimes pose challenges for metabolism and excretion.
+**Suggested Functional Group Replacements for Toxic Sections:**
 
-4.  **Complex Polycyclic Structure with Chiral Centers**: The fused bicyclic ring system (`c2c1[C@H](O)[C@H](F)[C@@H]2F`) with multiple chiral centers adds to the molecule's complexity. Such complex structures can be challenging for the body's metabolic enzymes, potentially leading to the formation of unique or reactive metabolites. The precise stereochemistry can also influence interactions with various biological targets, leading to unpredictable toxicity or off-target binding.
+To mitigate the toxicity associated with the nitro group and the aromatic amine, the following bioisosteric or metabolically stable replacements can be considered:
 
-**Suggested Functional Group Replacements to Mitigate Toxicity:**
+1.  **For the Nitro Group (`-NO2`):**
+    *   **Cyano (`-CN`)**: Similar electronic properties (electron-withdrawing) but less prone to reduction.
+    *   **Trifluoromethyl (`-CF3`)**: A metabolically stable, lipophilic, and electron-withdrawing group.
+    *   **Sulfonyl derivatives (`-SO2R`, e.g., -SO2CH3, -SO2NH2)**: Electronegative and generally metabolically stable. Sulfonamides (`-SO2NH2`) can also provide hydrogen bonding.
+    *   **Amide (`-CONH2`)**: Another polar and electron-withdrawing group, less prone to reductive metabolism.
+    *   **Halogens (F)**: While Cl is already present in another part of the molecule, fluorine is a common bioisostere, often used for its metabolic stability and ability to modify pKa and lipophilicity without introducing similar toxicity pathways as the nitro group.
 
-To address the potential toxicity, particularly concerning the nitrile group and overall lipophilicity, consider the following functional group replacements:
+2.  **For the Aromatic Amine/Chloroaniline Moiety (`-NH-C6H4-Cl`):**
+    *   **Replace the Amine Linker:**
+        *   **Amide (`-CONH-R` or `-NHCOR`)**: Converting the amine into an amide significantly reduces its basicity and susceptibility to N-hydroxylation, thereby reducing the risk of nitrenium ion formation.
+        *   **Sulfonamide (`-NHSO2R`)**: Similar to amides, sulfonamides are less basic and more metabolically stable than simple amines.
+        *   **Ether (`-O-R'`) or Thioether (`-S-R'`)**: If a non-nitrogenous linker is acceptable, these groups can provide similar connectivity without the amine toxicity profile.
+        *   **Alkyl linker (`-CH2-CH2-`) or Carbon-carbon bond**: Completely removing the nitrogen if the linker is not critical for activity.
+    *   **Modify the Aniline Moiety:**
+        *   **Replace with a less problematic aromatic ring or heterocycle**: Consider a pyridine, pyrimidine, or a non-chlorinated phenyl derivative if the substituent is not critical for activity.
+        *   **Strategic substitution on the aniline**: Sometimes, bulky substituents ortho to the nitrogen can hinder metabolic N-oxidation. However, this is highly dependent on the specific enzyme and can also lead to other metabolic pathways.
+        *   **Break the conjugation**: If possible, introduce an alkyl chain between the nitrogen and the aromatic ring (e.g., `-NH-CH2-Phenyl`) to reduce its aromatic amine character, but this might drastically alter the pharmacophoric features.
 
-1.  **For the Nitrile Group (-C≡N)**:
-    *   **Amide (-CONH2)**: A common bioisostere that is more polar, generally metabolically stable, and often less prone to hERG inhibition.
-    *   **Tetrazole (a 5-membered heterocyclic ring with 4 nitrogens)**: This is an excellent bioisostere for a nitrile or carboxylic acid. It is more polar, can maintain similar electronic properties, and often reduces toxicity while improving solubility.
-    *   **Oxadiazole or Thiadiazole rings**: These are other small heterocyclic rings (e.g., 1,2,4-oxadiazole, 1,3,4-oxadiazole) that can mimic the electronic effects of a nitrile while being more metabolically stable and potentially less toxic.
-
-2.  **To Reduce Overall Lipophilicity and Address Potential Sulfone/Fluorine Issues**:
-    *   **Introduce more polar functional groups**: Strategically replace some of the non-essential hydrophobic parts with more polar groups. For instance, if possible, replace one of the fluorines or a CH group on an aromatic or saturated ring with a hydroxyl (-OH), amine (-NH2), or methoxy (-OCH3) group. This can increase aqueous solubility and reduce non-specific binding.
-    *   **Modify or Replace the Sulfone Linker**: Depending on its importance for activity, explore alternatives like an amide (-CONH-), ester (-COO-), or a simple ether linkage (-O-). These linkers can alter the metabolic profile and polarity of the molecule.
-    *   **Simplify the Hydrophobic Core**: If the activity allows, simplifying the complex fused ring system or reducing the number of hydrophobic groups (e.g., replacing C-F bonds with C-H or C-OH) could help lower lipophilicity and improve the overall ADMET profile.
+It's crucial to evaluate any proposed replacements for their impact on drug activity, pharmacokinetics, and the emergence of new toxicities.
 ============================================================
-SMILES: O=[N+]([O-])c1c(NCc2ccc(F)cc2Cl)ccc2nonc12
-Response: Yes, the drug with the SMILES string O=[N+]([O-])c1c(NCc2ccc(F)cc2Cl)ccc2nonc12 is predicted to be toxic.
+Rank: 4
+Ligand Number: 6
+SMILES: O=[N+]([O-])c1c(NCc2cc(F)ccc2C(F)(F)F)ccc2nonc12
+Confidence Score: 0.6143
+Response: Yes, the drug with the SMILES O=[N+]([O-])c1c(NCc2cc(F)ccc2C(F)(F)F)ccc2nonc12 is **predicted to be toxic**.
+
+The primary functional groups contributing to its predicted toxicity are:
+
+1.  **The Nitro Group (-NO₂)**
+2.  **The Highly Fluorinated Phenyl Ring with a Trifluoromethyl Group**
+
+Here's a breakdown of the properties that make them toxic and suggested replacements:
+
+### 1. Nitro Group (-NO₂) Toxicity
 
 **Properties that make it toxic:**
-The primary reason for its predicted toxicity is the presence of the **aromatic nitro group (O=[N+]([O-])**). This functional group is metabolically reduced *in vivo* by various enzymes (e.g., nitroreductases) to highly reactive intermediates, such as nitroso and hydroxylamine species. These intermediates can cause significant biological damage through several mechanisms:
-1.  **DNA Damage:** Nitroso and hydroxylamine metabolites can react with DNA, forming adducts and leading to mutations, which can contribute to genotoxicity and carcinogenicity.
-2.  **Oxidative Stress:** The reduction of nitro groups can generate reactive oxygen species (ROS), leading to oxidative stress, which damages cellular components like lipids, proteins, and DNA.
-3.  **Methemoglobinemia:** Aromatic nitro compounds and their metabolites can oxidize the ferrous iron (Fe2+) in hemoglobin to ferric iron (Fe3+), forming methemoglobin. Methemoglobin cannot bind oxygen, thereby reducing the blood's oxygen-carrying capacity and leading to hypoxia.
+
+*   **Formation of Reactive Intermediates:** Aromatic nitro groups are susceptible to enzymatic reduction by reductases (e.g., cytochrome P450 reductases, xanthine oxidase, NADPH-cytochrome P450 reductase) in the body. This reduction typically proceeds through one-electron transfer steps, forming highly reactive and unstable intermediates:
+    *   **Nitroso species (-NO):** Highly electrophilic, can react with nucleophilic biomolecules.
+    *   **Hydroxylamines (-NHOH):** Can be oxidized back to nitroso species or form reactive nitrenium ions.
+    *   **Amino groups (-NH₂):** While the final amino group is generally less toxic, the conversion pathway is problematic.
+*   **DNA Adduct Formation:** The reactive nitroso and hydroxylamine intermediates can covalently bind to DNA (forming DNA adducts), leading to DNA damage, mutations, and potentially carcinogenesis.
+*   **Oxidative Stress:** The reduction process can generate reactive oxygen species (ROS), contributing to oxidative stress, which damages cellular components like proteins, lipids, and DNA.
+*   **Methemoglobinemia:** Some nitro compounds can cause methemoglobinemia by oxidizing hemoglobin to methemoglobin, reducing oxygen-carrying capacity.
+
+**Suggested Replacements for the Nitro Group:**
+
+The goal is to replace the nitro group with bioisosteres that maintain similar electronic and steric properties but are less prone to metabolic reduction and reactive intermediate formation.
+
+*   **Amide (-CONH₂):** Offers similar steric bulk and hydrogen bonding potential but is metabolically more stable.
+*   **Nitrile (-C≡N):** Is electron-withdrawing like the nitro group, but its toxicity profile is generally lower, although it depends on the context of the molecule.
+*   **Sulfonamide (-SO₂NH₂):** Another electron-withdrawing group that is less prone to reduction.
+*   **Small Heterocycles:** Non-reducible heterocycles like isoxazole, oxadiazole, or pyrazole can sometimes mimic the electronic and steric properties of a nitro group and offer better metabolic stability.
+*   **Carbonyl derivatives (e.g., -CHO, -COOH, -COOR):** Depending on the desired electronic effect and steric bulk, these could be explored.
+
+### 2. Highly Fluorinated Phenyl Ring with a Trifluoromethyl Group (-C₆H(F)₃-CF₃) Toxicity
+
+**Properties that make it toxic:**
+
+*   **High Lipophilicity:** The multiple fluorine atoms and especially the trifluoromethyl (-CF₃) group significantly increase the compound's lipophilicity (fat solubility). High lipophilicity can lead to:
+    *   **Poor aqueous solubility:** Impeding absorption and formulation.
+    *   **Accumulation in fatty tissues:** Leading to prolonged exposure and potential for delayed toxicity.
+    *   **Membrane disruption:** High lipophilicity can lead to non-specific interactions with biological membranes.
+    *   **Increased off-target binding:** Due to greater penetration into various tissues and non-specific interactions with proteins.
+*   **Metabolic Stability:** Highly fluorinated compounds, especially those with CF₃ groups, are often very metabolically stable. While sometimes desirable for increasing half-life, excessive stability can lead to:
+    *   **Bioaccumulation:** The compound stays in the body longer, potentially reaching toxic concentrations.
+    *   **Reduced elimination:** Slowing down drug clearance.
+*   **Potential for Defluorination:** In some specific cases, highly fluorinated compounds, particularly aryl trifluoromethyl groups, can undergo defluorination under harsh metabolic conditions, leading to the formation of reactive intermediates (e.g., acyl fluorides or carbanions) which can cause cellular damage or react with proteins.
+*   **Disruption of Biological Interactions:** The strong electron-withdrawing nature of fluorine can alter the electronic properties of the ring, potentially affecting interactions with biological targets in an undesirable way, or interfering with endogenous processes.
+
+**Suggested Replacements for the Highly Fluorinated Phenyl Ring with a Trifluoromethyl Group:**
+
+The goal is to reduce lipophilicity, improve metabolic clearance, and mitigate the potential for reactive metabolite formation, while ideally retaining crucial pharmacological activity.
+
+*   **Reduce Fluorine Substitution:**
+    *   **Less substituted phenyl rings:** Replace some fluorine atoms with hydrogen atoms.
+    *   **Mono- or disubstituted phenyl rings:** Use substituents like -Cl, -CH₃, -OCH₃, or -CN instead of multiple fluorines.
+*   **Replace the Trifluoromethyl Group (-CF₃):**
+    *   **Methyl (-CH₃) or Ethyl (-CH₂CH₃) group:** Reduces lipophilicity significantly while maintaining some steric bulk.
+    *   **Methoxy (-OCH₃):** Can maintain some electronic properties while being less lipophilic and potentially offering different metabolic pathways (O-demethylation).
+    *   **Small polar groups:** If the position allows, groups like -OH, -NH₂, or -CH₂OH could be considered to increase solubility and reduce lipophilicity, though this would drastically change electronic properties.
+*   **Replace the Entire Fluorinated Phenyl Ring:**
+    *   **Less lipophilic aromatic rings:** Phenyl rings with fewer or different substituents (e.g., a single halogen, alkyl, or alkoxy group).
+    *   **Heteroaryl rings:** Rings containing heteroatoms (N, O, S) like pyridine, pyrimidine, thiophene, furan, or imidazole. These can maintain aromaticity but offer different electronic profiles, hydrogen bonding capabilities, and often lower lipophilicity than highly fluorinated carbocycles, while also potentially being more susceptible to beneficial metabolism.
+
+By systematically replacing these toxicophores with the suggested bioisosteres, the aim is to develop a safer compound while ideally retaining its desired pharmacological activity. This process typically involves iterative design, synthesis, and re-evaluation.
+============================================================
+Rank: 5
+Ligand Number: 4
+SMILES: O=[N+]([O-])c1c(NCc2cc(F)cc(Cl)c2)ccc2nonc12
+Confidence Score: 0.5781
+Response: Yes, the drug with the SMILES string O=[N+]([O-])c1c(NCc2cc(F)cc(Cl)c2)ccc2nonc12 is predicted to be toxic.
+
+The properties that likely contribute to its toxicity are:
+
+1.  **Nitro group (O=[N+]([O-])-Ar):** Aromatic nitro groups are common toxicophores. They can be reduced *in vivo* to highly reactive intermediates such as nitroso and hydroxylamine derivatives. These intermediates can then form nitrenium ions, which are strong electrophiles. These electrophilic species can covalently bind to biological macromolecules like DNA and proteins, leading to genotoxicity, mutagenicity, and carcinogenicity. They can also induce oxidative stress within cells.
+2.  **Halogenated Aromatic Ring (F and Cl on the phenyl ring):** The presence of multiple halogens (fluorine and chlorine) on an aromatic ring can enhance toxicity. Halogenated compounds can be metabolically resistant to degradation, potentially leading to bioaccumulation in the body. More significantly, they can undergo metabolic activation (e.g., through epoxidation or oxidative dechlorination) to form reactive intermediates that can cause organ-specific toxicities, including liver toxicity, neurotoxicity, or carcinogenicity. The electron-withdrawing nature of halogens can also make neighboring carbons more susceptible to nucleophilic attack or facilitate the formation of reactive species.
+
+To mitigate toxicity, you could consider replacing the toxic sections with the following functional groups:
+
+1.  **Replacing the Nitro Group:**
+    *   **Amide:** Convert the nitro group to an amide (e.g., -CONH2 or -NHCOR). Amides are generally more metabolically stable and less reactive than nitro groups.
+    *   **Sulfonamide:** Replace with a sulfonamide (-SO2NH2 or -NHSO2R). Sulfonamides are often well-tolerated and can have favorable pharmacokinetic properties.
+    *   **Alkyl or Alkoxy Group:** Simple alkyl groups (e.g., -CH3, -C2H5) or alkoxy groups (e.g., -OCH3, -OC2H5) are typically metabolically benign and can be used to modulate lipophilicity and electronic properties without introducing significant toxicity concerns.
+    *   **Nitrile:** A nitrile group (-CN) can be less reactive than a nitro group in certain biological contexts and is found in many drug molecules.
+    *   **Carboxyl Group:** A carboxylic acid (-COOH) or its ester derivative (-COOR) could be considered, although this would significantly alter the electronic properties.
+
+2.  **Replacing Halogens on the Aromatic Ring:**
+    *   **Hydrogen:** The simplest approach is to remove the halogens entirely, replacing them with hydrogen atoms, provided that the resulting changes in electronic properties and lipophilicity do not negatively impact target binding.
+    *   **Alkyl Groups:** Small alkyl groups (e.g., -CH3, -C2H5, -CF3) can mimic some of the lipophilic and steric properties of halogens but are generally less prone to metabolic activation or toxicity. Trifluoromethyl (-CF3) groups are often metabolically stable and can provide similar electronic effects to halogens.
+    *   **Methoxy Group:** A methoxy group (-OCH3) can provide steric bulk and lipophilicity while typically being metabolically benign.
+    *   **Small Heteroaromatic Rings:** Replacing the halogenated phenyl ring with a small, less toxic heteroaromatic ring (e.g., pyridine, pyrimidine, furan, thiophene) can sometimes maintain or improve target binding while enhancing metabolic stability and a more favorable toxicity profile.
+
+It is critical to conduct thorough structure-activity relationship (SAR) studies to ensure that any proposed modifications effectively reduce toxicity while retaining or improving the desired therapeutic activity.
+============================================================
+Rank: 6
+Ligand Number: 8
+SMILES: O=[N+]([O-])c1c(Nc2ccc(F)cc2)ccc2nonc12
+Confidence Score: 0.4833
+Response: Yes, the drug `O=[N+]([O-])c1c(Nc2ccc(F)cc2)ccc2nonc12` is predicted to be toxic by clinical toxicity prediction models.
+
+The primary property that makes it toxic is likely the **nitro group (O=[N+]([O-])).** Nitro groups are well-known pharmacophores that can be associated with various toxicities, including genotoxicity and carcinogenicity, due to their metabolic reduction in the body to form reactive intermediates (such as nitroso and hydroxylamine derivatives). These reactive species can covalently bind to DNA and other critical biomolecules, leading to cellular damage and adverse effects. While a specific mutagenicity prediction for this compound indicates it is not mutagenic, the overall clinical toxicity prediction suggests broader concerns related to the presence of the nitro group.
+
+To mitigate this toxicity, you could consider replacing the nitro group with various bioisosteric functional groups that aim to maintain similar electronic and steric properties but lack the inherent reactivity of the nitro group. Some common bioisosteric replacements for a nitro group include:
+
+*   **Hydrogen (-H)**: A simple replacement that would significantly reduce steric bulk and electron-withdrawing effects.
+*   **Fluorine (-F)**: A small, electron-withdrawing atom that can mimic some electronic effects of the nitro group without the same reactivity.
+*   **Hydroxyl (-OH)**: Can provide hydrogen bonding capabilities and some electronic withdrawal.
+*   **Cyano (-CN)**: An electron-withdrawing and linear group that can offer similar electronic properties.
+*   **Sulfonyl (-SO2R)**: A larger, strongly electron-withdrawing group (e.g., -SO2Me).
+*   **Carbonyl (-COR)**: Depending on the R group, this could be an amide, ester, or ketone, offering different electronic and steric properties.
+*   **Heteroaromatic rings**: Such as 1,2,3-triazole, 1,2,4-oxadiazole, or tetrazole. These can offer similar electronic properties and steric bulk to the nitro group while often improving metabolic stability and reducing inherent toxicity.
+
+The most suitable replacement would depend on the desired pharmacological activity and the specific role of the nitro group in the original molecule's binding interactions and overall physicochemical properties.
+============================================================
+Rank: 7
+Ligand Number: 17
+SMILES: Ic1cccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)c1
+Confidence Score: 0.4693
+Response: Yes, the drug with the SMILES string `Ic1cccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)c1` is predicted to be toxic.
+
+### Properties that make it toxic:
+
+1.  **Presence of the Iodine Atom**: The iodine atom on the phenyl ring is the primary concern for toxicity.
+    *   **Metabolic Dehalogenation**: The carbon-iodine bond can be cleaved in the body, potentially forming reactive intermediates (e.g., aryl radicals) that can bind irreversibly to biological macromolecules like proteins and DNA, leading to cellular damage and toxicity.
+    *   **Thyroid Disruption**: Iodine-containing compounds can interfere with the normal function of the thyroid gland, potentially disrupting thyroid hormone synthesis or metabolism due to the structural similarity of iodine to endogenous iodine used by the thyroid. This can lead to endocrine side effects.
+    *   **Increased Lipophilicity and Nonspecific Binding**: Iodine is a large, lipophilic atom. Its presence can significantly increase the overall lipophilicity of the molecule, which may lead to higher accumulation in fatty tissues, slower clearance from the body, and an increased propensity for non-specific binding to a variety of biological targets, contributing to a broader spectrum of adverse effects.
+
+2.  **Complex, Fused Heterocyclic System**: While not as immediately evident as the iodine, the intricate fused heterocyclic system (which includes a tetrazole and other nitrogen atoms) combined with the bulky phenyl substituent could also contribute to toxicity:
+    *   **Complex Metabolism**: Such complex structures can undergo diverse and sometimes unpredictable metabolic transformations, potentially leading to the formation of reactive or less favorable metabolites.
+    *   **Off-target Interactions**: The unique three-dimensional shape and electronic properties of a large, complex molecule like this could lead to unintended interactions with various biological targets beyond any desired therapeutic target, resulting in off-target toxicity.
+
+### Suggested functional groups to replace the toxic sections:
+
+Focusing on the most probable toxicophore, the iodine atom, here are suggestions for replacement:
+
+1.  **Replace Iodine with Fluorine (F)**:
+    *   **Rationale**: Fluorine is a common bioisostere for heavier halogens. It is significantly smaller and forms a very strong carbon-fluorine bond, making it highly metabolically stable. It is generally much less toxic and can help fine-tune pharmacokinetic properties (e.g., lipophilicity, metabolic stability) without the liabilities of iodine.
+    *   **Proposed SMILES modification**: `Fc1cccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)c1`
+
+2.  **Replace Iodine with Hydrogen (H)**:
+    *   **Rationale**: This is the simplest approach to completely remove the halogen and any associated toxicity. It would also lead to a decrease in lipophilicity, which might be beneficial for certain pharmacokinetic profiles.
+    *   **Proposed SMILES modification**: `c1cccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)c1`
+
+3.  **Replace Iodine with a Methyl Group (CH3)**:
+    *   **Rationale**: A methyl group can serve as a non-halogen bioisostere, maintaining some steric bulk and lipophilicity, while being generally metabolically stable and non-toxic. It avoids the issues associated with halogens.
+    *   **Proposed SMILES modification**: `Cc1cccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)c1`
+
+Further investigation would be needed to assess if the complex heterocyclic system itself poses significant toxicological liabilities. If so, more advanced medicinal chemistry strategies like scaffold hopping or targeted modifications to specific nitrogen atoms might be considered, but the iodine is the most immediate and clear area for modification.
+============================================================
+Rank: 8
+Ligand Number: 18
+SMILES: CS(=O)(=O)c1ccc(Oc2cc(F)cc(C#N)c2)c2c1[C@H](O)[C@H][C@@H]2F
+Confidence Score: 0.4684
+Response: The drug with the SMILES string `CS(=O)(=O)c1ccc(Oc2cc(F)cc(C#N)c2)c2c1[C@H](O)[C@H][C@@H]2F` is predicted to be toxic.
+
+The properties that likely make this drug toxic are primarily associated with the following functional groups:
+
+1.  **Nitrile Group (-C≡N):** This is a significant concern due to its potential for metabolic conversion to cyanide (CN-) in the body. Cyanide is a potent mitochondrial toxin, which can lead to various systemic toxicities affecting the heart, brain, and overall metabolic function.
+2.  **Highly Fluorinated Aromatic Ring (Oc2cc(F)cc(C#N)c2):** While single fluorine atoms can be beneficial, multiple fluorines on an aromatic ring, especially adjacent to other functional groups, can sometimes lead to toxicity. Metabolic defluorination can occur, releasing fluoride ions or creating reactive intermediates that can cause adverse effects.
+3.  **Alpha-Fluoro Alcohol (adjacent to the fused ring system, specifically `[C@@H]2F` next to `[C@H](O)`):** This structural motif can be problematic. Similar to highly fluorinated rings, enzymatic defluorination of alpha-fluoro alcohols can lead to the formation of reactive carbonyl compounds (aldehydes or ketones) or other toxic metabolites, which can damage cellular components.
+4.  **Sulfonyl Group (-SO2-):** Sulfonyl groups are generally well-tolerated in many drugs, but in specific molecular contexts, they can sometimes contribute to idiosyncratic toxicities or hypersensitivity reactions, although this is less common than the issues associated with nitriles or reactive fluorinated moieties.
+
+**Suggested Functional Group Replacements to Mitigate Toxicity:**
+
+To reduce the predicted toxicity while attempting to retain drug activity, focus on modifying the nitrile and fluorinated sections:
+
+1.  **For the Nitrile Group (-C≡N):**
+    *   **Tetrazole:** This is a widely used and effective bioisostere for nitriles. It mimics the electronic and steric properties without the risk of cyanide release, and also provides hydrogen bond donor/acceptor capabilities.
+    *   **Oxadiazole (e.g., 1,2,4-oxadiazole or 1,3,4-oxadiazole):** These heterocyclic rings can serve as good bioisosteres, offering similar electronic and steric profiles without the cyanide hazard.
+    *   **Carboxylic acid (-COOH) or Carboxylic acid esters/amides:** If the nitrile's role is to provide an acidic proton or hydrogen bond acceptor, these groups could be considered, though they significantly alter polarity.
+    *   **Small polar groups:** Such as `-CH2OH` (hydroxymethyl) or `-CH2NH2` (aminomethyl) if the main function is to provide a polar handle without strong acidity or electronic withdrawal.
+
+2.  **For the Highly Fluorinated Aromatic Ring and Alpha-Fluoro Alcohol:**
+    *   **Reduce Fluorine Count or Replace with Hydrogen/Other Halogens:** For the `Oc2cc(F)cc(C#N)c2` part, consider replacing one or more fluorine atoms with hydrogen or less reactive halogens like chlorine, if the primary role is lipophilicity or modest electronic modulation.
+    *   **Remove the Fluorine from the Alpha-Fluoro Alcohol:** For the `[C@@H]2F` on the fused ring, the most direct approach to eliminate potential defluorination toxicity would be to replace this fluorine with a hydrogen atom, a hydroxyl group, or a small alkyl group, if consistent with maintaining the overall structure and activity.
+    *   **Modify Ring System:** Explore analogous aromatic or bicyclic ring systems with fewer or no reactive fluorine atoms if the fluorination is found to be directly contributing to toxicity.
+
+It is crucial to re-evaluate the toxicity and activity of any modified structures through further computational predictions and experimental testing.
+============================================================
+Rank: 9
+Ligand Number: 3
+SMILES: [3H]c1ccc2nonc2c1[N+](=O)[O-]
+Confidence Score: 0.4285
+Response: Yes, the drug `[3H]c1ccc2nonc2c1[N+](=O)[O-]`, which is 4-nitrobenzofurazan, is predicted to be toxic.
+
+**Properties that make it toxic:**
+The primary reason for its toxicity lies with the **aromatic nitro group (-NO2)**. Aromatic nitro compounds are known to be toxic due to their susceptibility to bioreduction in the body. This reduction process, often catalyzed by nitroreductases, leads to the formation of highly reactive intermediates such as nitroso, hydroxylamine, and ultimately, amine derivatives. These reactive intermediates can:
+1.  **Induce DNA damage:** They can react with DNA, leading to adduct formation, strand breaks, and mutations, which can contribute to carcinogenicity or genotoxicity.
+2.  **Generate oxidative stress:** The redox cycling of nitro groups can produce reactive oxygen species (ROS), leading to oxidative damage to cellular components.
+3.  **Cause methemoglobinemia:** Some nitro compounds can oxidize hemoglobin to methemoglobin, impairing oxygen transport in the blood.
 
 **Suggested functional group replacements:**
-To reduce the toxicity associated with the nitro group, consider replacing it with less reactive and more metabolically stable bioisosteres. Potential alternatives include:
-*   **Cyano (-CN) group:** This group is generally more metabolically stable and less prone to reduction compared to a nitro group. It can also maintain similar electronic properties.
-*   **Sulfonamide (-SO2NH2) group:** This is a common and often well-tolerated functional group in medicinal chemistry, known for its good metabolic stability.
-*   **Trifluoromethyl (-CF3) group:** This group is metabolically stable and can also impact the physicochemical properties (e.g., lipophilicity, electron-withdrawing nature) favorably, potentially mimicking some of the nitro group's electronic effects without its toxic liabilities.
+To reduce the toxicity associated with the aromatic nitro group, particularly its propensity for bioreduction and subsequent reactive intermediate formation, several bioisosteric or metabolically stable replacements can be considered:
+
+1.  **Cyano (-CN):** This group is strongly electron-withdrawing and is generally metabolically stable, offering a non-reducible alternative with similar electronic properties.
+2.  **Trifluoromethyl (-CF3):** Another highly electron-withdrawing and metabolically stable group that can replace the nitro group, often improving lipophilicity and metabolic stability.
+3.  **Sulfonyl (-SO2R) or Sulfonamide (-SO2NH2):** These groups are also electron-withdrawing and can mimic some of the electronic characteristics of the nitro group without undergoing the same reductive activation pathways.
+4.  **Amide (-CONH2):** While less electron-withdrawing than a nitro group, an amide can sometimes serve as a replacement if the electronic requirement is not overly stringent, and it is metabolically more benign in this context.
+5.  **Small Heterocycles:** Certain small, electron-deficient nitrogen-containing heterocycles (e.g., oxadiazoles, triazoles) might be explored to maintain electronic properties while offering improved metabolic stability and reduced reactivity compared to the nitro group.
+
+The choice of replacement would depend on the specific role of the nitro group in the parent molecule's desired therapeutic activity and whether its electronic or steric properties are crucial for binding or efficacy. Extensive chemical modification and biological testing would be required to identify the optimal non-toxic analog.
 ============================================================
-SMILES: O=[N+]([O-])c1c(NCc2ccc(F)cc2C(F)(F)F)ccc2nonc12
-Response: Yes, the drug with the SMILES string `O=[N+]([O-])c1c(NCc2ccc(F)cc2C(F)(F)F)ccc2nonc12` is predicted to be toxic. This was confirmed by a clinical toxicology prediction model.
+Rank: 10
+Ligand Number: 16
+SMILES: CC(C)C[C@@H]1C[C@@H](c2cccc(Br)c2)Nc2nnnn21
+Confidence Score: 0.3702
+Response: The drug with the SMILES string `CC(C)C[C@@H]1C[C@@H](c2cccc(Br)c2)Nc2nnnn21` is predicted to be **toxic**.
 
 **Properties that make it toxic:**
 
-The primary functional group responsible for its toxicity is the **aromatic nitro group** (O=[N+]([O-])). Aromatic nitro compounds are well-known toxicophores due to their metabolic activation pathways within the body. Enzymes, particularly nitroreductases, can reduce the nitro group through several steps to highly reactive intermediates:
+The toxicity likely stems from two main structural features present in the molecule:
 
-1.  **Nitro radical anions (NO2•-)**: These short-lived species can participate in redox cycling, leading to the generation of reactive oxygen species (ROS). This process causes oxidative stress, which can damage cellular components.
-2.  **Nitroso compounds (R-NO)** and **hydroxylamines (R-NHOH)**: These intermediates are electrophilic. They can readily react with nucleophilic biomolecules, such as DNA (forming DNA adducts, which can lead to mutations and genotoxicity) and proteins (potentially causing enzyme inhibition or dysfunction).
-3.  **Aromatic amines (R-NH2)**: The final reduction products, aromatic amines, can also be toxic. They may be further metabolized to reactive electrophiles that can bind to DNA, thereby contributing to carcinogenicity.
+1.  **Brominated Phenyl Group:** Organobromine compounds, especially aromatic ones, can undergo metabolic activation in the body. This process can lead to the formation of reactive intermediates (e.g., epoxides or free radicals) that can covalently bind to and damage cellular macromolecules like DNA and proteins. This can result in various adverse effects, including hepatotoxicity or genotoxicity. While the provided PubMed search didn't directly detail the specific toxic mechanisms of organobromine compounds in drugs, the general principle of metabolic activation of halogens is well-established in toxicology.
 
-These mechanisms can lead to a range of adverse effects, including:
-*   **Genotoxicity and Carcinogenicity**: Due to DNA damage and adduct formation.
-*   **Methemoglobinemia**: Especially with certain aromatic amines, which can oxidize hemoglobin to methemoglobin, impairing the blood's oxygen-carrying capacity.
-*   **Hepatotoxicity and Nephrotoxicity**: Damage to the liver and kidneys, often a result of oxidative stress and electrophilic reactions.
+2.  **Tetrazole Ring:** The tetrazole moiety itself can contribute to toxicity. As indicated by the PubMed search results (Article 2, PMID: 38042272), tetrazole compounds and their derivatives "may induce specific cumulative and toxic effects in living organisms." This suggests that the tetrazole ring is not always metabolically benign and has been associated with acute toxicity that can be predicted by QSAR models.
 
-While the molecule also contains a trifluoromethyl group (-CF3), it is generally considered metabolically stable and less directly implicated in general toxicity compared to the aromatic nitro group.
+**Suggested Functional Group Replacements:**
+
+To potentially mitigate the toxicity, the following functional group replacements for the identified problematic sections could be considered, while aiming to retain desired pharmacological activity:
+
+1.  **For the Brominated Phenyl Group (replacing the Bromine atom):**
+    *   **Hydrogen (-H):** A direct replacement with hydrogen would remove the halogen entirely, eliminating the risk associated with bromine's metabolic activation.
+    *   **Fluorine (-F):** Fluorine is a common bioisostere for hydrogen and can often replace heavier halogens. It is generally more metabolically stable than bromine and less prone to reductive dehalogenation or oxidative metabolism that leads to reactive intermediates.
+    *   **Methyl Group (-CH3):** A small alkyl group like methyl can replace the bromine. This would alter lipophilicity and electronic effects but remove the metabolically labile halogen.
+
+2.  **For the Tetrazole Ring:**
+    *   **Carboxylic Acid (-COOH):** The tetrazole ring is often considered a bioisostere for the carboxylic acid group (as noted in Article 3, PMID: 31200236). Replacing the tetrazole with a carboxylic acid could maintain similar acidic and hydrogen-bonding properties, though its pKa and overall molecular properties would need careful consideration.
+    *   **Other Nitrogen-Containing Heterocycles:**
+        *   **1,2,3-Triazole or 1,2,4-Triazole:** These five-membered nitrogen-containing heterocycles are frequently used as bioisosteric replacements for tetrazoles. They often offer improved metabolic stability and potentially reduced toxicity profiles.
+        *   **Oxadiazoles (e.g., 1,3,4-Oxadiazole, 1,2,4-Oxadiazole) or Thiadiazoles (e.g., 1,3,4-Thiadiazole):** These heterocycles can mimic some of the electronic and hydrogen-bonding characteristics of the tetrazole while potentially exhibiting better metabolic stability and lower toxicity.
+    *   **Sulfonamide (-SO2NH2):** If the primary function of the tetrazole is to act as an acidic hydrogen bond donor, a sulfonamide could be a bioisosteric alternative. However, its pKa and molecular interactions would need thorough evaluation to ensure similar activity.
+
+The choice of replacement should be guided by the specific role of the functional group in the drug's mechanism of action, its pharmacokinetic profile, and further structure-activity relationship (SAR) studies.
+============================================================
+Rank: 11
+Ligand Number: 0
+SMILES: C1COCCN1NC2=C(C=C(C=C2)C(F)(F)F)[N+](=O)[O-]
+Confidence Score: 0.3611
+Response: Yes, the drug with the SMILES string `C1COCCN1NC2=C(C=C(C=C2)C(F)(F)F)[N+](=O)[O-]` is predicted to be toxic.
+
+The properties that make it toxic are primarily associated with the following functional groups:
+
+1.  **Aromatic Nitro Group (-NO2):**
+    *   **Mechanism:** Nitro groups on aromatic rings are often metabolically reduced *in vivo* by nitroreductases to highly reactive intermediates such as nitroso, hydroxylamino, and amino derivatives.
+    *   **Toxicity:** These intermediates can undergo redox cycling, leading to the generation of reactive oxygen species (ROS), oxidative stress, and subsequent damage to cellular components like DNA and proteins. This can result in hepatotoxicity (liver damage), nephrotoxicity (kidney damage), methemoglobinemia, and may also be associated with mutagenicity and carcinogenicity.
+
+2.  **Hydrazine Linkage (-N-N-):**
+    *   **Mechanism:** Hydrazine derivatives can be metabolically activated (e.g., through oxidation) to form electrophilic species.
+    *   **Toxicity:** These electrophilic species can covalently bind to biological macromolecules, including DNA and proteins, disrupting their function. This can lead to various forms of toxicity such as hepatotoxicity, neurotoxicity, hemolysis, and genotoxicity. Hydrazines can also inhibit certain enzymes (e.g., monoamine oxidase).
+
+3.  **Trifluoromethyl Group (-CF3):**
+    *   **Mechanism:** While often used to increase lipophilicity and metabolic stability, in some cases, a trifluoromethyl group can undergo metabolic defluorination.
+    *   **Toxicity:** This process can yield reactive intermediates or release fluoride ions, which can potentially be toxic. However, in this specific molecule, the nitro and hydrazine groups are generally considered to be more significant toxicophores.
+
+**Suggested Functional Group Replacements to Reduce Toxicity:**
+
+To mitigate the toxicity, you could consider replacing the identified problematic functional groups with more stable and less reactive alternatives while aiming to maintain the desired pharmacological activity (if any).
+
+1.  **To replace the Nitro Group (-NO2) on the aromatic ring:**
+    *   **Cyano (-CN):** Often used as a bioisostere for a nitro group due to similar electronic properties and size, but generally much less toxic.
+    *   **Amide (-CONH2):** Provides hydrogen bonding capabilities and is metabolically stable.
+    *   **Sulfonamide (-SO2NH2):** Another common bioisostere with good metabolic stability.
+    *   **Halogens (e.g., Cl, F):** Can provide lipophilicity and modulate electronic properties without the high reactivity of the nitro group.
+    *   **Small alkyl groups (e.g., -CH3, -C2H5):** Can adjust lipophilicity and steric bulk without introducing reactive moieties.
+
+2.  **To replace the Hydrazine Linkage (-N-N-):** The primary goal here is to eliminate the reactive nitrogen-nitrogen bond.
+    *   **Amide (-CONH-) or Reverse Amide (-NHCO-):** These are very common, stable, and metabolically robust linkers that maintain a hydrogen bonding potential and can mimic some structural aspects.
+    *   **Methylene (-CH2-):** A simple, stable, and flexible aliphatic linker that replaces the heteroatom bond with a carbon-carbon bond.
+    *   **Ether (-O-) or Thioether (-S-):** Stable linkers that introduce different electronic and steric properties.
+    *   **Simple Amine (-NH-):** If the valency and stability allow for direct replacement of one of the nitrogens, or if a single N atom linker is sufficient.
+    *   **Alkene (-CH=CH-) or Alkyne (-C≡C-):** If specific geometric constraints or rigid linkers are desired.
+    *   **Direct Carbon-Carbon Bond (-C-C-):** If the connectivity and rigidity allow, replacing the entire N-N segment with a carbon-carbon bridge.
+
+The specific choice of replacement depends on the desired pharmacological activity, the required steric and electronic properties for receptor binding, and the overall desired physicochemical profile of the new compound. This process usually involves iterative design, synthesis, and biological evaluation.
+============================================================
+Rank: 12
+Ligand Number: 2
+SMILES: Cc1ccc(CNc2ccc3nonc3c2[N+](=O)[O-])cc1
+Confidence Score: 0.3009
+Response: Yes, the drug with the SMILES string Cc1ccc(CNc2ccc3nonc3c2[N+](=O)[O-])cc1 is predicted to be toxic.
+
+**Properties that make it toxic:**
+Based on its chemical structure, the two primary functional groups likely contributing to its toxicity are the **nitro group ([N+](=O)[O-])** and the **aromatic amine (CNc)**.
+
+1.  **Nitro Group ([N+](=O)[O-])**:
+    *   Nitro groups, particularly when attached to aromatic rings, are notorious for their potential toxicity.
+    *   They can undergo metabolic reduction in the body, often catalyzed by nitroreductases. This reduction process can generate highly reactive intermediates such as nitroso compounds, hydroxylamines, and ultimately aromatic amines.
+    *   These reactive metabolites are electrophilic and can covalently bind to biological macromolecules like DNA and proteins, leading to DNA damage (mutagenicity), carcinogenicity, and other forms of cellular toxicity.
+
+2.  **Aromatic Amine (CNc)**:
+    *   Aromatic amines are also well-known for their toxic potential, including mutagenicity and carcinogenicity.
+    *   They are often metabolized by cytochrome P450 enzymes (e.g., N-hydroxylation) to form N-hydroxylated aromatic amines.
+    *   These N-hydroxylated metabolites can then be further activated (e.g., via O-acetylation or sulfation) to highly reactive electrophilic species (nitrenium ions).
+    *   These reactive species can then form adducts with DNA and proteins, disrupting cellular function and leading to genotoxicity, carcinogenicity, and methemoglobinemia.
+
+**Suggested Functional Group Replacements to Reduce Toxicity:**
+
+To mitigate the toxicity associated with these groups, medicinal chemists often employ bioisosteric replacements that maintain desired pharmacological activity but remove or reduce the toxic potential.
+
+1.  **For the Nitro Group ([N+](=O)[O-])**:
+    *   **Sulfonyl group (-SO2R)**: This is a common replacement as it maintains some electronic similarity but is generally metabolically stable and much less prone to reductive activation.
+    *   **Trifluoromethyl group (-CF3)**: Another common replacement, it is electron-withdrawing and metabolically stable.
+    *   **Cyano group (-CN)**: This group is also electron-withdrawing and generally less toxic than a nitro group.
+    *   **Halides (-Cl, -F)**: Depending on the specific electronic requirements, halogens can sometimes serve as replacements, offering metabolic stability.
+
+2.  **For the Aromatic Amine (CNc)**:
+    *   **Tertiary Amine**: If the primary amine is involved in metabolic activation, converting it to a tertiary amine can often block this pathway, although it might change physicochemical properties significantly.
+    *   **Amide (-CONHR')**: Converting the amine into an amide can significantly reduce its basicity and susceptibility to N-hydroxylation, thereby reducing toxicity. This is a very common strategy.
+    *   **Ether (-OR)**: Replacing the amine with an ether linkage, if pharmacologically permissible, can remove the nitrogen atom entirely, eliminating amine-related toxicity.
+    *   **Sulfonyl group (-SO2R)**: Similar to the nitro group replacement, a sulfonyl group can sometimes replace an aromatic amine, offering stability.
+    *   **Alkyl or Aromatic Groups with Spacers**: Sometimes, introducing a saturated or aromatic linker to separate the nitrogen from the aromatic ring, or simply substituting the nitrogen atom differently, can reduce toxicity by altering its metabolic fate.
+============================================================
+Rank: 13
+Ligand Number: 14
+SMILES: O=[N+]([O-])c1c(Nc2cc(F)cc(F)c2)ccc2nonc12
+Confidence Score: 0.2936
+Response: Yes, the drug with the SMILES string O=[N+]([O-])c1c(Nc2cc(F)cc(F)c2)ccc2nonc12 is predicted to be toxic.
+
+The primary properties contributing to its toxicity are:
+
+1.  **The Nitro Group (-NO2):** This is a significant concern because it can be metabolically reduced in the body to highly reactive intermediates, such as nitroso and hydroxylamine derivatives. These intermediates can then interact with biological macromolecules like DNA and proteins, leading to:
+    *   **DNA damage:** Causing mutations and potential carcinogenicity.
+    *   **Oxidative stress:** Generating reactive oxygen species that damage cells.
+    *   **Methemoglobinemia:** Impairing oxygen transport in the blood.
+
+2.  **The Highly Fluorinated Phenyl Ring (-C6H3F2):** While generally less definitively toxic than a nitro group, extensive fluorination can contribute to toxicity by:
+    *   **Altering metabolic pathways:** The strong electron-withdrawing nature of fluorine can make the ring more resistant to metabolism, potentially leading to bioaccumulation. Alternatively, specific metabolic pathways might produce reactive intermediates, though this is less common than with nitro groups.
+    *   **Increasing lipophilicity:** A high degree of fluorination increases lipophilicity, which can lead to increased membrane permeability, off-target binding, and accumulation in tissues, potentially leading to adverse effects.
+
+**Suggested Functional Group Replacements to Reduce Toxicity:**
+
+To mitigate the toxicity, particularly from the nitro group, and potentially address issues with the highly fluorinated phenyl ring, the following replacements can be considered:
+
+1.  **For the Nitro Group (-NO2):**
+    *   **Amide (-CONH2):** Retains hydrogen bonding capabilities and is generally much less toxic.
+    *   **Cyano (-CN):** Electron-withdrawing and relatively stable, often used as a bioisostere.
+    *   **Sulfonyl (-SO2R) or Methyl Sulfone (-SO2CH3):** Electron-withdrawing groups that can mimic some electronic properties of the nitro group.
+    *   **Triazole (e.g., 1,2,3-triazole or 1,2,4-triazole):** Aromatic heterocycles that can mimic electron-withdrawing and hydrogen-bonding characteristics while being metabolically stable.
+    *   **Carbonyl (C=O) derivatives:** In some contexts, a ketone or aldehyde might be considered if the electronic and steric requirements allow, though less common as a direct nitro replacement.
+    *   **Carboxylic acid (-COOH) or ester (-COOR):** These introduce different acidity/lipophilicity profiles but can be considered if the overall electronic and steric requirements for activity permit.
+
+2.  **For the Highly Fluorinated Phenyl Ring (specifically the -C6H3F2 moiety):**
+    *   **Less Fluorinated or Non-Fluorinated Phenyl Rings:** Replacing the difluoro-substituted phenyl with a simple phenyl ring or one with a single fluorine, chlorine, bromine, methyl, or methoxy group could reduce potential metabolic burden and alter lipophilicity.
+    *   **Heteroaromatic Rings:** Replacing the carbocyclic phenyl ring with a heteroaromatic ring can maintain aromaticity and improve or modulate physicochemical properties and metabolic profiles. Examples include:
+        *   **Pyridine, Pyrimidine, Pyrazine:** Nitrogen-containing aromatic rings that can alter basicity and hydrogen bonding.
+        *   **Thiazole, Oxazole, Imidazole:** Five-membered heteroaromatic rings.
+        *   **Thiophene, Furan:** Sulfur- or oxygen-containing aromatic rings.
+    *   **Alkyl or Cycloalkyl Groups:** If the aromaticity of this specific ring is not critical for target binding, a non-aromatic group like a *tert*-butyl group, a cyclopropyl, or cyclohexyl could significantly reduce lipophilicity and change metabolic pathways.
+
+**Overall Optimization Strategies:**
+
+*   **Lipophilicity Modulation:** Adjust the overall lipophilicity (LogP) of the molecule to be within an optimal range (typically 0-3 for many oral drugs) to reduce off-target binding, membrane disruption, and bioaccumulation.
+*   **Metabolic Soft Spot Analysis:** Systematically identify other potential sites in the molecule that could be susceptible to metabolism leading to reactive or toxic metabolites and modify them.
+*   **Introduction of Polar Groups:** Strategically incorporate polar groups (e.g., hydroxyls, primary amines, amides) to improve solubility and excretion, provided they do not negatively impact target binding.
+*   **Scaffold Hopping:** Consider exploring entirely different core scaffolds that retain the necessary pharmacophoric features but inherently avoid the identified toxic substructures.
+============================================================
+Rank: 14
+Ligand Number: 1
+SMILES: O=[N+]([O-])c1c(NCc2ccccc2)ccc2nonc12
+Confidence Score: 0.2824
+Response: Yes, the drug with the SMILES string `O=[N+]([O-])c1c(NCc2ccccc2)ccc2nonc12` is predicted to be toxic.
+
+### Properties that make it toxic:
+The primary toxic moiety in this molecule is the **aromatic nitro group (-NO2)**. Aromatic nitro compounds are often toxic due to their metabolic reduction in the body. This reduction occurs via enzymes (like nitroreductases) primarily in the liver and gut flora, leading to the formation of highly reactive intermediates:
+
+1.  **Nitroso compounds (-NO) and hydroxylamines (-NHOH):** These intermediates are electrophilic and can react with nucleophilic cellular components, particularly DNA and proteins.
+    *   **DNA Adducts:** This reaction can lead to the formation of DNA adducts, causing mutations, genotoxicity, and potentially carcinogenesis.
+    *   **Protein Binding:** Binding to proteins can alter enzyme function or lead to immunotoxicity.
+2.  **Reactive Oxygen Species (ROS) Generation:** The redox cycling of nitro compounds and their intermediates can generate superoxide radicals and other reactive oxygen species. This leads to oxidative stress, which damages cellular lipids, proteins, and DNA, contributing to cytotoxicity and organ damage.
+3.  **Methemoglobinemia:** Some aromatic nitro compounds can oxidize the ferrous iron (Fe2+) in hemoglobin to ferric iron (Fe3+), forming methemoglobin. Methemoglobin cannot bind oxygen, leading to a reduction in the blood's oxygen-carrying capacity, which can result in tissue hypoxia.
+
+### Suggested functional group replacements for the toxic aromatic nitro group:
+To reduce or eliminate the toxicity associated with the aromatic nitro group, it should be replaced with functional groups that are more metabolically stable or less prone to generating reactive intermediates, while ideally maintaining or improving desired pharmacological properties. Here are some common and effective replacements:
+
+1.  **Amination (-NH2):** Replacing a nitro group with an amino group is a common strategy. Amines are generally less toxic than nitro groups and can often serve as hydrogen bond donors/acceptors, potentially maintaining or improving binding affinity. However, primary aromatic amines can also be metabolized to reactive species (e.g., through N-hydroxylation), so further evaluation is necessary.
+2.  **Amide (-CONH2 or -NHCOR):** Amide linkages are more stable and less reactive than nitro groups. They are good hydrogen bond donors and acceptors and can contribute to molecular rigidity, which might be beneficial for binding.
+3.  **Sulfonamide (-SO2NH2):** Sulfonamides are bioisosteric to amides and can replace nitro groups effectively. They are stable, often display good pharmacological properties, and are widely used in medicinal chemistry.
+4.  **Cyano (-CN):** A cyano group is a small, polar, electron-withdrawing group that can sometimes mimic the electronic properties of a nitro group without its metabolic liabilities.
+5.  **Halogenation (e.g., -F, -Cl):** Replacing a nitro group with a halogen (especially fluorine or chlorine) can modify electronic properties and lipophilicity. Halogens are generally metabolically stable and can form favorable interactions (e.g., halogen bonds), potentially improving binding.
+6.  **Hydroxyl (-OH) or Alkoxy (-OR):** These groups are polar and can engage in hydrogen bonding. They are generally much safer than nitro groups and can influence solubility and electronic properties.
+7.  **Methyl (-CH3) or other alkyl groups:** While changing the electronic properties significantly, an unreactive alkyl group can increase lipophilicity and fill hydrophobic pockets, potentially improving binding or cell permeability without the toxicity concerns.
+8.  **Heterocycles:** Replacing the nitro group with a small, stable, non-toxic heterocyclic ring (e.g., pyrazole, isoxazole, thiazole) can mimic some of the electronic and steric properties while improving metabolic stability.
+
+When choosing a replacement, it is crucial to consider the specific role of the nitro group in the original molecule's binding and pharmacokinetic profile. Computational tools (like molecular docking) and experimental testing are essential to confirm that the new functional group maintains or improves the desired biological activity while reducing toxicity.
+============================================================
+Rank: 15
+Ligand Number: 15
+SMILES: c1ccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)cc1
+Confidence Score: 0.1600
+Response: Yes, the drug with the SMILES string `c1ccc([C@@H]2C[C@H](c3ccccc3)n3nnnc3N2)cc1` is predicted to be toxic.
+
+The toxicity of this compound can be attributed to several properties, primarily its molecular structure:
+
+1.  **Fused Tetrazole Ring System:** The compound features a 1,2,3,4-tetrazole ring fused to a 5-membered nitrogen-containing ring (likely a pyrrolidine derivative).
+    *   **Metabolic Instability:** While some tetrazoles are stable, this specific fused arrangement, especially with multiple adjacent nitrogens and the direct fusion to a nitrogen in the other ring, can lead to metabolic instability. Such systems might undergo enzymatic cleavage (e.g., by reductases or oxidases), leading to the formation of reactive intermediates like diazo compounds, highly reactive imines, or other electrophilic species that can interact with biological macromolecules (DNA, proteins), causing toxicity.
+    *   **Electron Properties:** The high density of nitrogen atoms within the fused system can make the ring system electron-deficient, potentially increasing its reactivity with biological nucleophiles, or conversely, making it susceptible to reduction and subsequent reactivity.
+
+2.  **High Lipophilicity:** The presence of two large phenyl groups significantly increases the molecule's lipophilicity (fat-solubility). High lipophilicity can lead to:
+    *   **Poor Aqueous Solubility:** Hindering formulation and absorption.
+    *   **Non-specific Binding:** Increased binding to plasma proteins and cell membranes, leading to off-target effects and reduced free drug concentration at the target site.
+    *   **Accumulation:** Tendency to accumulate in fatty tissues (e.g., liver, brain), potentially leading to prolonged exposure and organ toxicity.
+    *   **Slow Clearance:** Difficult excretion from the body, leading to higher systemic exposure over time.
+
+3.  **Lack of Readily Metabolizable Groups:** Beyond the potential metabolic vulnerability of the fused tetrazole itself, the molecule lacks obvious "soft spots" for facile Phase I (e.g., hydroxylation of alkyl chains or aromatic rings) or Phase II (e.g., glucuronidation, sulfation of hydroxyl groups) metabolism, which are crucial for rendering drugs more water-soluble for excretion. This could contribute to its accumulation and prolonged systemic exposure, increasing the risk of toxicity.
+
+**Suggested Functional Group Replacements to Reduce Toxicity:**
+
+To mitigate the identified toxic properties, the following functional group modifications are suggested:
+
+1.  **To Address the Fused Tetrazole System:**
+    *   **Replace the Tetrazole with More Stable Fused Heterocycles:**
+        *   **Fused Pyrazole:** Replacing the tetrazole with a fused pyrazole (e.g., at the N-C bond shared with the pyrrolidine) would reduce the nitrogen count and often lead to more metabolically stable systems.
+        *   **Fused Imidazole or Triazole (e.g., 1,2,4-triazole):** These options still maintain an aromatic nitrogen heterocycle but have different electronic and metabolic profiles that might be less problematic than the tetrazole.
+    *   **Simplify the Core Structure:** If the entire fused bicyclic system is problematic, consider breaking the fusion and replacing the entire core with a simpler, non-fused nitrogen heterocycle (e.g., a substituted pyrrolidine or piperidine ring) to reduce structural complexity and potential reactivity. This would likely require a complete re-design for target binding.
+
+2.  **To Address High Lipophilicity:**
+    *   **Replace Phenyl Rings with Polar Aromatic Heterocycles:**
+        *   **Pyridine, Pyrimidine, Pyrazine:** Replacing one or both phenyl rings with nitrogen-containing aromatic heterocycles increases polarity, improves aqueous solubility, and can introduce additional sites for H-bonding.
+        *   **Furan, Thiophene:** These are less lipophilic than phenyl rings but still aromatic and can maintain some electronic properties.
+    *   **Introduce Polar Functional Groups:** Add hydrophilic groups to the existing phenyl rings or the heterocyclic core at metabolically stable positions.
+        *   **Hydroxyl (-OH):** Improves solubility and provides a site for glucuronidation/sulfation.
+        *   **Carboxylic Acid (-COOH):** Significantly increases polarity due to ionization.
+        *   **Amine (-NH2, -NHR, -NR2):** Primary, secondary, or tertiary amines increase polarity and basicity; however, careful consideration of basicity and metabolic stability is needed.
+        *   **Amide (-CONH2) or Sulfonamide (-SO2NH2):** These polar, H-bonding groups can increase solubility without significantly impacting basicity.
+        *   **Small, Polar Heterocycles as Substituents:** For example, attaching a morpholine, piperazine, or pyrrolidine ring as a substituent to one of the phenyls or the core can improve solubility and introduce a basic site.
+============================================================
+Rank: 16
+Ligand Number: 13
+SMILES: O=[N+]([O-])c1c(Nc2ccc(C(F)(F)F)cc2Cl)ccc2nonc12
+Confidence Score: 0.1455
+Response: The drug with the SMILES string `O=[N+]([O-])c1c(Nc2ccc(C(F)(F)F)cc2Cl)ccc2nonc12` is predicted to be **toxic**.
+
+The toxicity is primarily attributed to two specific functional groups present in the molecule:
+
+1.  **Aromatic Nitro Group (O=[N+]([O-])-Ar):**
+    *   **Properties that make it toxic:** Aromatic nitro groups are susceptible to metabolic reduction by enzymes like nitroreductases (e.g., cytochrome P450 reductases, bacterial nitroreductases) in the liver and gut. This reduction forms highly reactive intermediates such as nitroso (Ar-NO) and hydroxylamine (Ar-NHOH) derivatives.
+    *   **Mechanism of Toxicity:** These intermediates are potent electrophiles that can covalently bind to cellular macromolecules like DNA and proteins. This DNA adduction can lead to DNA damage (mutations, strand breaks), contributing to genotoxicity and potential carcinogenicity. They can also cause methemoglobinemia by oxidizing hemoglobin's ferrous iron, impairing oxygen transport. Furthermore, redox cycling can generate reactive oxygen species (ROS), leading to oxidative stress.
+    *   **Suggested Replacements:** To reduce toxicity, the nitro group could be replaced with bioisosteric groups that are less prone to metabolic activation. Examples include:
+        *   **Cyano group (-CN):** Similar electronic properties but generally more metabolically stable.
+        *   **Sulfonyl groups (-SO2R, e.g., -SO2CH3):** Electron-withdrawing without the redox liabilities.
+        *   **Halogen atoms (e.g., -Cl, -F):** Can maintain electron-withdrawing character.
+        *   **Stable heterocycles:** Such as oxadiazole, tetrazole, or pyrazole rings, which can mimic steric and electronic features while offering better metabolic stability.
+
+2.  **Secondary Aromatic Amine Linker (Ar-NH-Ar'):**
+    *   **Properties that make it toxic:** Secondary aromatic amines are prone to metabolic activation through N-hydroxylation by cytochrome P450 enzymes (e.g., CYP1A2, CYP3A4) in the liver. This forms N-hydroxyarylamine intermediates (Ar-NHOH-Ar').
+    *   **Mechanism of Toxicity:** These N-hydroxyarylamines can undergo further activation (e.g., by N-acetyltransferases or sulfotransferases) to highly reactive nitrenium ions (Ar-N+=Ar'). These nitrenium ions are strong electrophiles that readily form covalent adducts with DNA and proteins. This DNA damage is a well-established mechanism of genotoxicity and carcinogenicity, particularly associated with certain bladder and liver cancers. They can also contribute to hepatotoxicity.
+    *   **Suggested Replacements:** To mitigate the toxicity associated with the secondary aromatic amine linker, replacements that are metabolically more stable are recommended:
+        *   **Amide linker (-CONH- or -NHCO-):** Significantly more metabolically stable due to resonance stabilization, reducing susceptibility to N-hydroxylation.
+        *   **Sulfonamide linker (-SO2NH- or -NHSO2-):** Similar to amides, these are generally more metabolically stable and less prone to oxidative activation.
+        *   **Ether linker (-O-):** Replacing the -NH- with an oxygen atom eliminates the metabolically labile hydrogen and nitrogen.
+        *   **Methylene linker (-CH2-):** Can serve as a bridge, though its metabolic stability would need evaluation.
+        *   **Carbonyl linker (-C(=O)-):** If the primary function is structural, a carbonyl group could be considered.
+
+These suggested replacements aim to reduce the formation of reactive metabolites, thereby lowering the risk of genotoxicity, carcinogenicity, and other adverse effects.
+============================================================
+Rank: 17
+Ligand Number: 12
+SMILES: O=[N+]([O-])c1c(Nc2cccc(F)c2)ccc2nonc12
+Confidence Score: 0.1115
+Response: Yes, the drug with SMILES `O=[N+]([O-])c1c(Nc2cccc(F)c2)ccc2nonc12` is predicted to be toxic.
+
+**Properties contributing to toxicity:**
+
+The primary functional groups contributing to its predicted toxicity are:
+
+1.  **Aromatic Nitro group (O=[N+]([O-])-Ar):**
+    *   **Metabolic Reduction:** Nitro groups attached to aromatic rings are susceptible to metabolic reduction by nitroreductases (found in liver enzymes and gut microbiota). This reduction can lead to the formation of highly reactive intermediates such as nitroso, hydroxylamine, and eventually, amino derivatives.
+    *   **Redox Cycling and Oxidative Stress:** These reactive intermediates can undergo redox cycling, leading to the generation of reactive oxygen species (ROS). ROS cause oxidative stress, which can damage cellular components like lipids (lipid peroxidation), proteins, and DNA, leading to cellular dysfunction and toxicity.
+    *   **DNA Adduction:** Some intermediates, particularly hydroxylamines, are electrophilic and can covalently bind to DNA, forming DNA adducts. This can lead to genotoxicity, mutagenicity (causing mutations), and potentially carcinogenicity.
+    *   **Methemoglobinemia:** Aromatic nitro compounds can also oxidize the iron in hemoglobin from Fe²⁺ to Fe³⁺, forming methemoglobin. Methemoglobin cannot bind oxygen, thus impairing oxygen transport in the blood.
+
+2.  **Aniline-like functionality (Ar-NH-Ar):**
+    *   **Metabolic Activation:** The secondary aromatic amine linker (`-NH-`) can be metabolically activated, particularly by cytochrome P450 enzymes (e.g., CYP1A2, CYP3A4), through N-hydroxylation. This forms N-hydroxyarylamines.
+    *   **Reactive Electrophiles and DNA/Protein Binding:** N-hydroxyarylamines are often unstable and can undergo further activation (e.g., via sulfation or acetylation) to form highly reactive electrophilic species, such as nitrenium ions. These nitrenium ions are potent electrophiles that can covalently bind to nucleophilic sites in DNA and proteins. This can lead to genotoxicity, carcinogenicity, and organ-specific toxicities, especially hepatotoxicity.
+
+**Suggested functional group replacements for toxic sections:**
+
+To mitigate the toxicity while aiming to retain pharmacological activity, consider replacing the problematic functional groups with metabolically stable and less toxic bioisosteres or linkers:
+
+1.  **For the Nitro Group (O=[N+]([O-])-Ar):**
+    *   **Cyano group (-C≡N):** Often metabolically stable and less prone to redox cycling.
+    *   **Sulfonyl group (-SO₂R):** Such as methyl sulfone (-SO₂CH₃) or sulfonamide (-SO₂NH₂). These are generally metabolically stable and have a much lower propensity for forming reactive intermediates.
+    *   **Trifluoromethyl group (-CF₃):** A common and effective lipophilic bioisostere that is metabolically stable.
+    *   **Carbamoyl group (-CONH₂):**
+    *   **Fluorine (-F) or other halogens:** Can be used to introduce electron-withdrawing effects without the reductive metabolism issues of a nitro group.
+
+2.  **For the Aniline-like Linker (Ar-NH-Ar):**
+    *   **Amide bond (-CONH- or -NHCO-):** Amides are generally more stable to N-oxidation by CYPs and are less prone to forming reactive nitrenium ions compared to aromatic amines. This is a very common strategy to "detoxify" aromatic amines in drug design.
+    *   **Urea bond (-NHCONH-):** Similar to amides, urea linkages are metabolically more stable and less prone to oxidative activation.
+    *   **Sulfonamide bond (-NHSO₂- or -SO₂NH-):** This is a highly stable and frequently used linker in medicinal chemistry, known for its metabolic stability.
+    *   **Ether linkage (-O-):** If the spatial and electronic requirements allow, an ether can replace the amine, offering high metabolic stability and non-toxicity.
+    *   **Methylene bridge (-CH₂-):** Introducing a saturated carbon linker removes the aromatic amine character and metabolic liabilities associated with it.
+    *   **Direct carbon-carbon bond:** In some cases, directly coupling the aromatic rings might be an option, removing the linker entirely if the spatial arrangement is acceptable.
+
+When implementing these replacements, it is critical to perform further *in silico*, *in vitro*, and *in vivo* studies to assess the impact on the drug's desired pharmacological activity, physicochemical properties (e.g., solubility, permeability, logP), and overall ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) profile.
+============================================================
+Rank: 18
+Ligand Number: 5
+SMILES: O=[N+]([O-])c1c(NCc2cc(F)ccc2F)ccc2nonc12
+Confidence Score: 0.0672
+Response: Yes, the drug represented by the SMILES string `O=[N+]([O-])c1c(NCc2cc(F)ccc2F)ccc2nonc12` is predicted to be toxic.
+
+**Properties that make it toxic:**
+The primary reason for its predicted toxicity is the presence of the **nitro group (`-NO2`) attached to an aromatic ring**. Aromatic nitro compounds are well-known toxicophores. In the body, these groups undergo reductive metabolism, primarily by nitroreductase enzymes (found in the liver, gut microbiota, and other tissues). This process leads to the formation of highly reactive intermediates:
+1.  **Nitroso group (`-NO`)**: A potent electrophile that can readily react with nucleophilic sites in biological macromolecules like DNA and proteins.
+2.  **Hydroxylamine group (`-NHOH`)**: Another reactive intermediate that can undergo further oxidation or react with cellular components.
+
+These reactive species are responsible for various toxic effects.
+
+**Specific Toxicities Associated with Aromatic Nitro Groups:**
+*   **Genotoxicity and Mutagenicity:** The reactive nitroso and hydroxylamine intermediates can form covalent adducts with DNA, leading to DNA damage, mutations, and potentially carcinogenicity.
+*   **Hepatotoxicity:** Liver damage can occur due to the metabolic stress, the formation of reactive intermediates, and their adducts with essential liver cell components.
+*   **Methemoglobinemia:** These intermediates can oxidize the ferrous iron (Fe2+) in hemoglobin to ferric iron (Fe3+), forming methemoglobin. Methemoglobin cannot bind oxygen effectively, leading to reduced oxygen-carrying capacity of the blood and tissue hypoxia.
+*   **Oxidative Stress:** The redox cycling involved in the reduction of nitro groups can generate reactive oxygen species (ROS), contributing to cellular damage and inflammation.
+
+**Suggested Functional Groups for Replacement:**
+To mitigate the toxicity, the **nitro group** is the primary target for replacement. The goal is to substitute it with functional groups that ideally retain similar electronic or steric properties (which may be crucial for desired biological activity) but eliminate the problematic reductive pathway. Here are common suggestions for replacement:
+
+1.  **Sulfonyl Derivatives:** Such as methylsulfonyl (`-SO2CH3`) or sulfonylamide (`-SO2NH2`). These are strong electron-withdrawing groups, generally metabolically stable, and are not prone to forming reactive intermediates like nitro groups.
+2.  **Cyano Group (`-CN`):** This is a small, electron-withdrawing group that is typically metabolically stable and can often serve as a bioisostere for the nitro group.
+3.  **Carboxamide (`-CONH2`) or Ester (`-COOR`):** These are polar groups with some electron-withdrawing character. They are generally considered safer, though esters can be hydrolyzed in vivo, which might need to be considered.
+4.  **Halogens:** Such as chlorine (`-Cl`), bromine (`-Br`), or fluorine (`-F`). While their electronic and steric properties differ from a nitro group, halogens, particularly chlorine, are frequently used as bioisosteres to replace nitro groups or to modulate electron density and lipophilicity.
+5.  **Perfluoroalkyl Groups:** Such as trifluoromethyl (`-CF3`). This is a highly electron-withdrawing and metabolically stable group, often employed as a bioisostere for similar effects to nitro groups but without the reductive toxicity.
+
+The optimal replacement would require further computational modeling and experimental validation to ensure that the desired biological activity is maintained while toxicity is effectively mitigated.
+============================================================
+Rank: 19
+Ligand Number: 11
+SMILES: O=[N+]([O-])c1cccc(Nc2ccc3nonc3c2[N+](=O)[O-])c1
+Confidence Score: -0.0677
+Response: Yes, the drug O=[N+]([O-])c1cccc(Nc2ccc3nonc3c2[N+](=O)[O-])c1 is predicted to be toxic based on `ClinToxPred`.
+
+**Properties that make it toxic:**
+The primary culprits for its toxicity are the two **aromatic nitro groups (-NO2)**. While our `MutagenicityPred` tool indicates it is *not mutagenic*, aromatic nitro compounds are generally known toxicophores due to the following properties:
+
+1.  **Metabolic Activation:** Nitro groups can be enzymatically reduced by various nitroreductases (e.g., by gut microbiota or cytosolic enzymes like DT-diaphorase, xanthine oxidase, or cytochrome P450 reductases) to highly reactive intermediates such as nitroso (-N=O) and hydroxylamine (-NHOH) derivatives. These intermediates can be further reduced to aromatic amines (-NH2).
+2.  **Redox Cycling and Oxidative Stress:** The one-electron reduction of nitro groups can lead to the formation of nitro radical anions. In the presence of oxygen, these radical anions can readily transfer their electron to O2, forming superoxide radicals (O2•-). This process initiates a redox cycling cascade that generates various reactive oxygen species (ROS), such as hydrogen peroxide (H2O2) and hydroxyl radicals (•OH). ROS cause oxidative stress, damaging cellular components like lipids, proteins, and DNA, contributing to general cytotoxicity and potential organ damage, even if not directly leading to *mutagenic* effects.
+3.  **Potential for Electrophilic Reactivity:** Although the `MutagenicityPred` tool indicates no mutagenicity for this specific molecule, the reactive nitroso and hydroxylamine metabolites derived from nitro groups are electrophilic. They can still form covalent adducts with nucleophilic centers in cellular macromolecules, potentially leading to other forms of cellular damage or toxicity beyond direct mutations.
 
 **Suggested functional group replacements for the toxic sections:**
+To mitigate the toxicity, the problematic nitro groups should be replaced with functional groups that are less prone to metabolic activation or electrophilic reactivity, while ideally maintaining similar electronic or steric properties if a specific activity is desired.
 
-To mitigate the toxicity associated with the aromatic nitro group, the goal is to replace it with a metabolically stable group that can ideally maintain the desired pharmacological activity without the toxic liabilities. Here are some common bioisosteric replacements:
+Some suitable replacements for the nitro groups include:
 
-1.  **Hydrogen (-H)**: If the electronic or steric contribution of the nitro group is not critical for the drug's activity, simply removing it by replacing it with a hydrogen atom is the safest and most direct way to eliminate the toxicophore.
-2.  **Halogens (e.g., -F, -Cl, -Br)**: Halogen atoms are frequently used as bioisosteres for nitro groups because they are electron-withdrawing and generally metabolically stable. Fluorine is often preferred due to its small size and strong electron-withdrawing effect, sometimes mimicking the electronic properties of a nitro group closely.
-3.  **Nitrile (-CN)**: This functional group is also electron-withdrawing and metabolically stable, making it a viable option to mimic some of the electronic properties of a nitro group.
-4.  **Trifluoromethyl (-CF3)**: While already present elsewhere in the molecule, a trifluoromethyl group is a strong electron-withdrawing and metabolically stable bioisostere that can be considered for replacing the nitro group, offering similar electronic effects.
-5.  **Small alkyl groups (e.g., -CH3, -CH2CH3)**: If the primary role of the nitro group was steric bulk rather than electron-withdrawing properties, a small alkyl group could be an option. However, alkyl groups are electron-donating, which is the opposite electronic effect of a nitro group, so this replacement depends heavily on the specific requirements for activity.
-6.  **Hydroxy group (-OH)**: In some contexts, a hydroxyl group can replace a nitro group, but its properties (e.g., hydrogen bonding, polarity) are quite different, making it a less direct bioisostere in terms of electronic effects.
-
-The most appropriate replacement will depend on the specific structure-activity relationships of the compound and whether the nitro group's electronic or steric properties are essential for its therapeutic effect. Medicinal chemists typically explore a range of these replacements to optimize the balance between efficacy and safety.
+1.  **Sulfone (-SO2R) or Sulfonamide (-SO2NHR):** These are strong electron-withdrawing groups that are generally metabolically stable and much less toxic than nitro groups. They can mimic some electronic properties of the nitro group.
+2.  **Trifluoromethyl (-CF3):** This is a strong electron-withdrawing group that is metabolically stable, non-toxic, and often used as a bioisostere for other electron-withdrawing groups like nitro.
+3.  **Cyano (-CN):** A moderately strong electron-withdrawing group. Aryl nitriles are generally metabolically stable and much safer alternatives to nitro groups.
+4.  **Halogens (e.g., -F, -Cl):** Fluorine (-F) is a strong electron-withdrawing group and is metabolically stable. Chlorine (-Cl) is also electron-withdrawing. They are often used to modulate drug properties and are generally less toxic than nitro groups in this context.
+5.  **Carboxylic Acid Derivatives (-COOH, -COOR, -CONH2):** While not as strongly electron-withdrawing as nitro, these groups are metabolically safer and provide a handle for further modifications or improved pharmacokinetics (e.g., increased water solubility for excretion).
+6.  **Pyridines or other nitrogen heterocycles:** Depending on the specific position and desired electronic properties, incorporating a nitrogen atom within an aromatic ring (e.g., replacing a carbon with a nitrogen in the ring) can introduce electron-withdrawing properties without the toxicity associated with the nitro group.
 ============================================================
