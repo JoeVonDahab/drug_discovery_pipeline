@@ -90,7 +90,18 @@ mk_prepare_receptor.py --read_pdb receptor_ready_5tbm.pdb -o myreceptor_targeted
 * `myreceptor_targeted.gpf`: The AutoGrid Parameter File, with grid dimensions centered on the selected residues.
 * `myreceptor_targeted.box.pdb`: A PDB file representing the grid box for visualization.
 * `boron-silicon-atom_par.dat`: Atomic parameters for B and Si.
+#### Alternatively You can use one ligand as example to grid box
 
+```bash
+creating_box_with_example.sh
+```
+but you need to change the ligand and the protien names
+
+```bash
+mk_prepare_receptor.py --read_pdb your_protien_name.pdb -o myreceptor_targeted -p -g -v \
+    --box_enveloping ligand_example.pdb --padding 5.0
+```
+ 
 ### **2.5: Correcting the Grid Parameter File (GPF)**
 
 An error was encountered when initially running `autogrid4`: `"autogrid4: ERROR: Too many "map" keywords (...); the "ligand_types" command declares only (...) atom types."` This indicated a mismatch between the number of atom types listed in the `ligand_types` line and the number of `map` lines in the `myreceptor_targeted.gpf` file, or that the total number of unique types exceeded AutoGrid's limit (often around 14 for atom-specific affinity maps).
