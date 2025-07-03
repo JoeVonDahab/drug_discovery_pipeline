@@ -126,7 +126,7 @@ change the line:
 ```python
 input_smiles_file = "your_smiles_file.smi"  # <--- CHANGE THIS to process a different SMILES file
 ```
-2. then, in the terminal, run:
+2. then, in the terminal, with 'what' environment activated run:
 ```bash
 prepare_ligands.py
 ```
